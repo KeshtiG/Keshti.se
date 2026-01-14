@@ -26,12 +26,12 @@ export default function Header() {
 
   return (
     <React.Fragment>
-      <header className={`hidden fixed top-0 left-0 w-full z-50 md:flex px-4 md:px-8 lg:px-16 transition-all ease-in-out duration-500 border-b ${scrollTopData}`}>
+      <header className={`hidden fixed top-0 left-0 w-full z-50 md:flex px-4 md:px-8 lg:px-16 xl:px-24 transition-all ease-in-out duration-500 border-b ${scrollTopData}`}>
         <nav className="w-full mx-auto hidden md:flex justify-between items-center">
           <div className="flex items-center gap-4">
             <img src="/logo.png" alt="Keshti Gyllinger Logo" className={`transition-all ease-in-out duration-500 ${logoSize}`} />
           </div>
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-4">
             <NavLinks navLink={{ name: "", path: "" }} />
           </div>
         </nav>
