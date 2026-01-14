@@ -1,26 +1,143 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html {
+  scroll-snap-type: y mandatory;
+  background: transparent;
+  min-height: 100vh;
 }
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: "Google Sans", system-ui, sans-serif;
+  --font-display: "Funnel Display", system-ui, sans-serif;
+
+  /* Neutral color palette */
+  --color-neutral-950: hsl(268, 70%, 1%);
+  --color-neutral-900: hsl(268, 60%, 5%);
+  --color-neutral-800: hsl(268, 50%, 10%);
+  --color-neutral-700: hsl(268, 40%, 18%);
+  --color-neutral-600: hsl(268, 30%, 28%);
+  --color-neutral-500: hsl(268, 20%, 38%);
+  --color-neutral-400: hsl(268, 10%, 50%);
+  --color-neutral-300: hsl(268, 10%, 68%);
+  --color-neutral-200: hsl(268, 10%, 80%);
+  --color-neutral-100: hsl(268, 10%, 90%);
+  --color-neutral-50: hsl(268, 10%, 99%);
+
+  /* Primary color palette */
+  --color-primary-900: hsl(270, 100%, 2%);
+  --color-primary-800: hsl(270, 100%, 5%);
+  --color-primary-700: hsl(270, 95%, 12%);
+  --color-primary-600: hsl(270, 90%, 20%);
+  --color-primary-500: hsl(270, 86%, 30%);
+  --color-primary-400: hsl(270, 79%, 45%);
+  --color-primary-300: hsl(270, 70%, 65%);
+  --color-primary-200: hsl(270, 67%, 75%);
+  --color-primary-100: hsl(270, 51%, 85%);
+  --color-primary-50: hsl(270, 100%, 92%);
+
+  /* Link color palette */
+  --color-link-800: hsl(240, 100%, 5%);
+  --color-link-700: hsl(240, 95%, 12%);
+  --color-link-600: hsl(240, 90%, 20%);
+  --color-link-500: hsl(240, 86%, 30%);
+  --color-link-400: hsl(240, 79%, 45%);
+  --color-link-300: hsl(240, 70%, 65%);
+  --color-link-200: hsl(240, 67%, 75%);
+  --color-link-100: hsl(240, 51%, 85%);
+  
+  /* Accent color palette */
+  --color-accent-600: hsl(44, 92%, 38%);
+  --color-accent-500: hsl(44, 85%, 48%);
+  --color-accent-400: hsl(44, 100%, 64%);
+  --color-accent-300: hsl(44, 100%, 80%);
+
+  /* Application specific colors */
+  --color-background: var(--color-neutral-950);
+  --color-surface: var(--color-neutral-900);
+  --color-foreground: var(--color-neutral-100);
+  --color-foreground-secondary: var(--color-neutral-300);
+  --color-border: var(--color-neutral-800);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Custom animations */
+/* @keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+} */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-fade-in {
+  animation: fade-in 1s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 1s ease-out 0.3s both;
+}
+
+@layer base {
+  body {
+    @apply text-foreground font-sans;
+    background: linear-gradient(to bottom right, var(--color-primary-800), var(--color-background));
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .bg-gradient {
+    background: linear-gradient(135deg, hsl(266, 90%, 8%) 0%, var(--color-background) 20%);
+  }
+
+  @media screen and (max-width: 768px) {
+    .bg-gradient {
+      background: linear-gradient(135deg, hsl(266, 80%, 7%) 0%, var(--color-background) 20%);
+    }  
+  }
+
+  .text-glow {
+    text-shadow: 
+      0 0 20px rgba(138, 92, 246, 0.486),
+      0 0 40px rgba(139, 92, 246, 0.2),
+      0 0 50px rgba(139, 92, 246, 0.1);
+  }
+
+  @media screen and (max-width: 768px) {
+    .text-glow {
+      text-shadow: 
+        0 0 10px rgba(138, 92, 246, 0.486),
+        0 0 20px rgba(139, 92, 246, 0.2),
+        0 0 25px rgba(139, 92, 246, 0.1);
+    }
+  }
+
+  .nav-link:hover {
+    text-shadow: 
+      0 0 20px hsl(240, 85%, 61%),
+      0 0 40px hsl(240, 65%, 48%),
+      0 0 50px hsl(240, 65%, 48%);
+    box-shadow: inset 0 -2px 0 0 var(--color-link-400);
+  }
+
+  .nav-link.active {
+    box-shadow: inset 0 -2px 0 0 var(--color-link-100);
+    color: var(--color-link-100);
+  }
+
+  
 }

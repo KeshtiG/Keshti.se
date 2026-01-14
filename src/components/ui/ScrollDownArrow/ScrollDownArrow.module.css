@@ -1,0 +1,17 @@
+.scrollDown {
+    animation: scroll-down-arrow 2s infinite;
+}
+
+@keyframes scroll-down-arrow {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0, 40px);
+        opacity: 0;
+    }
+}
