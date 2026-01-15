@@ -1,6 +1,6 @@
 export default function Tag(props: { text: string }) {
     return (
-        <span className="inline-block border border-neutral-600 text-primary-200 text-xs uppercase font-medium tracking-widest px-3 py-1 rounded-full">
+        <span className="border border-neutral-600 text-primary-200 text-xs uppercase font-medium tracking-widest px-3 py-1 rounded-full">
             {props.text}
         </span>
     )

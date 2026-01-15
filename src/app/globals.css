@@ -1,107 +1,173 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
 html {
   scroll-snap-type: y mandatory;
   background: transparent;
   min-height: 100vh;
 }
 
-@import "tailwindcss";
-@import "tw-animate-css";
-
-
 @theme inline {
+  /* Font Classes */
   --font-sans: "Google Sans", system-ui, sans-serif;
   --font-display: "Funnel Display", system-ui, sans-serif;
 
-  /* Neutral color palette */
-  --color-neutral-950: hsl(268, 70%, 1%);
-  --color-neutral-900: hsl(268, 60%, 5%);
-  --color-neutral-800: hsl(268, 50%, 10%);
-  --color-neutral-700: hsl(268, 40%, 18%);
-  --color-neutral-600: hsl(268, 30%, 28%);
-  --color-neutral-500: hsl(268, 20%, 38%);
-  --color-neutral-400: hsl(268, 10%, 50%);
-  --color-neutral-300: hsl(268, 10%, 68%);
-  --color-neutral-200: hsl(268, 10%, 80%);
-  --color-neutral-100: hsl(268, 10%, 90%);
-  --color-neutral-50: hsl(268, 10%, 99%);
+  /* Neutral Color Palette */
+  --color-neutral-950: var(--color-neutral-950);
+  --color-neutral-900: var(--color-neutral-900);
+  --color-neutral-800: var(--color-neutral-800);
+  --color-neutral-700: var(--color-neutral-700);
+  --color-neutral-600: var(--color-neutral-600);
+  --color-neutral-500: var(--color-neutral-500);
+  --color-neutral-400: var(--color-neutral-400);
+  --color-neutral-300: var(--color-neutral-300);
+  --color-neutral-200: var(--color-neutral-200);
+  --color-neutral-100: var(--color-neutral-100);
+  --color-neutral-50: var(--color-neutral-50);
 
-  /* Primary color palette */
-  --color-primary-900: hsl(270, 100%, 2%);
-  --color-primary-800: hsl(270, 100%, 5%);
-  --color-primary-700: hsl(270, 95%, 12%);
-  --color-primary-600: hsl(270, 90%, 20%);
-  --color-primary-500: hsl(270, 86%, 30%);
-  --color-primary-400: hsl(270, 79%, 45%);
-  --color-primary-300: hsl(270, 70%, 65%);
-  --color-primary-200: hsl(270, 67%, 75%);
-  --color-primary-100: hsl(270, 51%, 85%);
-  --color-primary-50: hsl(270, 100%, 92%);
+  /* Primary Color Palette */
+  --color-primary-900: var(--color-primary-900);
+  --color-primary-800: var(--color-primary-800);
+  --color-primary-700: var(--color-primary-700);
+  --color-primary-600: var(--color-primary-600);
+  --color-primary-500: var(--color-primary-500);
+  --color-primary-400: var(--color-primary-400);
+  --color-primary-300: var(--color-primary-300);
+  --color-primary-200: var(--color-primary-200);
+  --color-primary-100: var(--color-primary-100);
+  --color-primary-50: var(--color-primary-50);
 
-  /* Link color palette */
-  --color-link-800: hsl(240, 100%, 5%);
-  --color-link-700: hsl(240, 95%, 12%);
-  --color-link-600: hsl(240, 90%, 20%);
-  --color-link-500: hsl(240, 86%, 30%);
-  --color-link-400: hsl(240, 79%, 45%);
-  --color-link-300: hsl(240, 70%, 65%);
-  --color-link-200: hsl(240, 67%, 75%);
-  --color-link-100: hsl(240, 51%, 85%);
-  
-  /* Accent color palette */
-  --color-accent-600: hsl(44, 92%, 38%);
-  --color-accent-500: hsl(44, 85%, 48%);
-  --color-accent-400: hsl(44, 100%, 64%);
-  --color-accent-300: hsl(44, 100%, 80%);
+  /* Accent Color Palette */
+  --color-accent-900: var(--color-accent-900);
+  --color-accent-800: var(--color-accent-800);
+  --color-accent-700: var(--color-accent-700);
+  --color-accent-600: var(--color-accent-600);
+  --color-accent-500: var(--color-accent-500);
+  --color-accent-400: var(--color-accent-400);
+  --color-accent-300: var(--color-accent-300);
+  --color-accent-200: var(--color-accent-200);
+  --color-accent-100: var(--color-accent-100);
+  --color-accent-50: var(--color-accent-50);
 
-  /* Application specific colors */
+  /* Application Specific Colors */
   --color-background: var(--color-neutral-950);
   --color-surface: var(--color-neutral-900);
-  --color-foreground: var(--color-neutral-100);
-  --color-foreground-secondary: var(--color-neutral-300);
+  --color-foreground: var(--color-neutral-50);
+  --color-foreground-secondary: var(--color-neutral-200);
   --color-border: var(--color-neutral-800);
+  --color-border-light: var(--color-neutral-700)
 }
 
-/* Custom animations */
-/* @keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-} */
+:root {
+  /* Neutral Color Tokens */
+  --neutral-h: 270;
+  --neutral-s: 20%;
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  --neutral-l-950: 1%;
+  --neutral-l-900: 5%;
+  --neutral-l-800: 10%;
+  --neutral-l-700: 15%;
+  --neutral-l-600: 20%;
+  --neutral-l-500: 30%;
+  --neutral-l-400: 45%;
+  --neutral-l-300: 65%;
+  --neutral-l-200: 75%;
+  --neutral-l-100: 85%;
+  --neutral-l-50: 95%;
+  
+  --color-neutral-950: hsl(var(--neutral-h) var(--neutral-s) var(--neutral-l-950));
+  --color-neutral-900: hsl(var(--neutral-h) var(--neutral-s) var(--neutral-l-900));
+  --color-neutral-800: hsl(var(--neutral-h) var(--neutral-s) var(--neutral-l-800));
+  --color-neutral-700: hsl(var(--neutral-h) var(--neutral-s) var(--neutral-l-700));
+  --color-neutral-600: hsl(var(--neutral-h) var(--neutral-s) var(--neutral-l-600));
+  --color-neutral-500: hsl(var(--neutral-h) var(--neutral-s) var(--neutral-l-500));
+  --color-neutral-400: hsl(var(--neutral-h) var(--neutral-s) var(--neutral-l-400));
+  --color-neutral-300: hsl(var(--neutral-h) var(--neutral-s) var(--neutral-l-300));
+  --color-neutral-200: hsl(var(--neutral-h) var(--neutral-s) var(--neutral-l-200));
+  --color-neutral-100: hsl(var(--neutral-h) var(--neutral-s) var(--neutral-l-100));
+  --color-neutral-50:  hsl(var(--neutral-h) var(--neutral-s) var(--neutral-l-50));
+
+
+  /* Primary Color Tokens */
+  --primary-h: 270;
+  --primary-s: 60%;
+  
+  --primary-l-900: 5%;
+  --primary-l-800: 10%;
+  --primary-l-700: 15%;
+  --primary-l-600: 20%;
+  --primary-l-500: 30%;
+  --primary-l-400: 45%;
+  --primary-l-300: 65%;
+  --primary-l-200: 75%;
+  --primary-l-100: 85%;
+  --primary-l-50: 95%;
+  
+  --color-primary-900: hsl(var(--primary-h) var(--primary-s) var(--primary-l-900));
+  --color-primary-800: hsl(var(--primary-h) var(--primary-s) var(--primary-l-800));
+  --color-primary-700: hsl(var(--primary-h) var(--primary-s) var(--primary-l-700));
+  --color-primary-600: hsl(var(--primary-h) var(--primary-s) var(--primary-l-600));
+  --color-primary-500: hsl(var(--primary-h) var(--primary-s) var(--primary-l-500));
+  --color-primary-400: hsl(var(--primary-h) var(--primary-s) var(--primary-l-400));
+  --color-primary-300: hsl(var(--primary-h) var(--primary-s) var(--primary-l-300));
+  --color-primary-200: hsl(var(--primary-h) var(--primary-s) var(--primary-l-200));
+  --color-primary-100: hsl(var(--primary-h) var(--primary-s) var(--primary-l-100));
+  --color-primary-50:  hsl(var(--primary-h) var(--primary-s) var(--primary-l-50));
+
+
+  /* Accent Color Tokens */
+  --accent-h: 240;
+  --accent-s: 60%;
+  
+  --accent-l-900: 5%;
+  --accent-l-800: 10%;
+  --accent-l-700: 15%;
+  --accent-l-600: 20%;
+  --accent-l-500: 30%;
+  --accent-l-400: 45%;
+  --accent-l-300: 65%;
+  --accent-l-200: 75%;
+  --accent-l-100: 85%;
+  --accent-l-50: 95%;
+  
+  --color-accent-900: hsl(var(--accent-h) var(--accent-s) var(--accent-l-900));
+  --color-accent-800: hsl(var(--accent-h) var(--accent-s) var(--accent-l-800));
+  --color-accent-700: hsl(var(--accent-h) var(--accent-s) var(--accent-l-700));
+  --color-accent-600: hsl(var(--accent-h) var(--accent-s) var(--accent-l-600));
+  --color-accent-500: hsl(var(--accent-h) var(--accent-s) var(--accent-l-500));
+  --color-accent-400: hsl(var(--accent-h) var(--accent-s) var(--accent-l-400));
+  --color-accent-300: hsl(var(--accent-h) var(--accent-s) var(--accent-l-300));
+  --color-accent-200: hsl(var(--accent-h) var(--accent-s) var(--accent-l-200));
+  --color-accent-100: hsl(var(--accent-h) var(--accent-s) var(--accent-l-100));
+  --color-accent-50:  hsl(var(--accent-h) var(--accent-s) var(--accent-l-50));
 }
 
-@keyframes slide-up {
-  from { 
-    opacity: 0; 
-    transform: translateY(20px);
+/* Mobil: sänk mättnad */
+@media (max-width: 640px){
+  :root { 
+    --neutral-s: 30%;
+    --primary-s: 50%;
+    --accent-s: 40%;
   }
-  to { 
-    opacity: 1; 
-    transform: translateY(0);
-  }
 }
 
-.animate-fade-in {
-  animation: fade-in 1s ease-in-out;
-}
-
-.animate-slide-up {
-  animation: slide-up 1s ease-out 0.3s both;
-}
 
 @layer base {
   body {
     @apply text-foreground font-sans;
-    background: linear-gradient(to bottom right, var(--color-primary-800), var(--color-background));
+    background: var(--color-background);
     min-height: 100vh;
+  }
+
+  .font-body {
+    @apply text-sm md:text-base text-foreground-secondary leading-relaxed;
   }
 }
 
+
 @layer utilities {
   .bg-gradient {
-    background: linear-gradient(135deg, hsl(266, 90%, 8%) 0%, var(--color-background) 20%);
+    background: linear-gradient(135deg, hsl(266, 90%, 4%) 0%, var(--color-background) 20%);
   }
 
   @media screen and (max-width: 768px) {
@@ -126,18 +192,20 @@ html {
     }
   }
 
+  .btn-glow {
+    box-shadow: 0 4px 20px hsla(240, 70%, 34%, 0.562);
+  }
+
   .nav-link:hover {
     text-shadow: 
       0 0 20px hsl(240, 85%, 61%),
       0 0 40px hsl(240, 65%, 48%),
       0 0 50px hsl(240, 65%, 48%);
-    box-shadow: inset 0 -2px 0 0 var(--color-link-400);
+    box-shadow: inset 0 -2px 0 0 var(--color-accent-400);
   }
 
   .nav-link.active {
-    box-shadow: inset 0 -2px 0 0 var(--color-link-100);
-    color: var(--color-link-100);
+    box-shadow: inset 0 -2px 0 0 var(--color-accent-100);
+    color: var(--color-accent-100);
   }
-
-  
 }

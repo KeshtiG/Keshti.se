@@ -22,7 +22,7 @@ export default function MobileMenu() {
     <div className="block md:hidden">
       <div
         className={`
-          fixed inset-0 z-49 bg-surface/80 backdrop-blur-sm
+          fixed inset-0 z-49 bg-primary-900/80 backdrop-blur-sm
           transition-transform duration-500
           ${visible ? "translate-y-0" : "translate-y-full pointer-events-none"}
         `}
@@ -34,7 +34,7 @@ export default function MobileMenu() {
 
       <button
         onClick={() => setVisible((prev) => !prev)}
-        className="bg-background w-24 flex justify-center gap-2 border border-link-300 text-link-100 rounded-full py-3 fixed bottom-8 left-1/2 -translate-x-1/2 z-50"
+        className="bg-background btn-glow w-24 flex justify-center gap-2 border border-accent-400 text-accent-100 rounded-full py-3 fixed bottom-8 left-1/2 -translate-x-1/2 z-50"
         aria-label={visible ? "Close menu" : "Open menu"}
       >
         {visible ? <IoCloseOutline /> : <CgMenuRight />}

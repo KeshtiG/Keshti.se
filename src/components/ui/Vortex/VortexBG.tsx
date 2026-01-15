@@ -1,4 +1,4 @@
-import { Vortex } from "@/components/Vortex/Vortex";
+import { Vortex } from "./Vortex";
 
 export default function VortexBG() {
   return (
@@ -11,7 +11,7 @@ export default function VortexBG() {
           particleCount={50}
           baseHue={220}
           baseSpeed={0.0}
-          rangeSpeed={0.75}
+          rangeSpeed={0.5}
           className="w-full h-full"
         />
       </div>

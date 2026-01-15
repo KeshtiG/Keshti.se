@@ -1,17 +1,21 @@
 "use client"
 import styles from "./Parallax.module.css"
-import Hero from "@/components/Hero";
-import ContactBanner from "../ContactBanner";
-import { projects } from "./ProjectData";
-import { ProjectCard } from "./ProjectCard";
-
 import {
   motion,
   useScroll,
   useSpring,
 } from "motion/react"
 
-export default function Parallax() {
+type ParallaxSection = {
+  id: string;
+  component: React.ReactNode;
+}
+
+type ParallaxProps = {
+  sections: ParallaxSection[];
+}
+
+export default function Parallax({ sections }: ParallaxProps) {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -21,18 +25,15 @@ export default function Parallax() {
 
   return (
     <>
-      <section className={`${styles["parallax-container"]} h-svh flex flex-col lg:justify-center items-center`}>
-        <Hero />
-      </section>
-
-      {projects.map((project) => (
-        <ProjectCard key={project.title} project={project} />
+      {sections.map((section) => (
+        <div
+          key={section.id}
+          className={`${styles["parallax-container"]} h-svh flex flex-col items-center justify-center`}
+        >
+          {section.component}
+        </div>
       ))}
       <motion.div className={styles.progress} style={{ scaleX }} />
-
-      <section className={`${styles["parallax-container"]} min-h-svh flex flex-col justify-center items-center`}>
-        <ContactBanner />
-      </section>
     </>
   );
 }

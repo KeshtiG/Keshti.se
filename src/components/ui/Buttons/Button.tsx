@@ -1,32 +1,39 @@
 import React from "react";
-import type { LucideIcon } from "lucide-react";
 import styles from "./Button.module.css";
+import Link from "next/link";
 
 export type ButtonVariant = "primary" | "secondary" | "tertiary";
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: ButtonVariant;
+type ButtonProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  href: string;
   icon?: React.ReactNode;
-  children: React.ReactNode;
-}
+  variant?: ButtonVariant;
+  className?: string;
+};
+
+const variantMap: Record<ButtonVariant, string> = {
+  primary: styles["btn-primary"],
+  secondary: styles["btn-secondary"],
+  tertiary: styles["btn-tertiary"],
+};
 
 export default function Button({
   variant = "primary",
   icon,
   children,
+  href,
   className = "",
   ...props
 }: ButtonProps) {
-  const variantClass = {
-    primary: styles["btn-primary"],
-    secondary: styles["btn-secondary"],
-    tertiary: styles["btn-tertiary"],
-  }[variant];
+  const variantClass = variantMap[variant];
 
   return (
-    <button className={`${styles.btn} ${variantClass} flex items-center justify-center gap-2 ${className}`} {...props}>
-      {icon && <span className="flex items-center">{icon}</span>}
-      <span>{children}</span>
-    </button>
+    <Link href={href}
+        className={`${styles.btn} ${variantClass} flex items-center justify-center gap-2 px-2 md:px-8 ${className}`}
+        {...props}
+      >
+        {icon && <span className="flex items-center">{icon}</span>}
+        <span>{children}</span>
+    </Link>
   );
 }

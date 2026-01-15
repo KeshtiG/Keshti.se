@@ -11,7 +11,7 @@ const navLinks: NavLink[] =
   [
     { name: "Home", path: "/" },
     { name: "Projects", path: "/#projects" },
-    { name: "About Me", path: "/#about" },
+    { name: "About Me", path: "/about" },
     { name: "Contact", path: "/#contact" },
   ];
 
@@ -22,7 +22,7 @@ export default function NavLinks({ navLink }: { navLink: NavLink }) {
       {navLinks.map((navLink) => (
         <a
           href={navLink.path}
-          className={`text-xl md:text-base uppercase tracking-widest text-link-200 hover:text-link-100 nav-link transition-colors px-2 py-1 ${pathname === navLink.path ? ' active' : ''}`}
+          className={`text-xl md:text-base uppercase tracking-widest text-accent-200 hover:text-accent-100 nav-link transition-colors px-2 py-1 ${pathname === navLink.path ? ' active' : ''}`}
           key={navLink.name}
         >
           {navLink.name}
