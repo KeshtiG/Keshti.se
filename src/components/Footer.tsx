@@ -15,6 +15,7 @@ export default function Footer({ className }: { className?: string }) {
     <footer className={`w-full bg-background py-10 px-6 border-t border-neutral-700 flex flex-col items-center gap-10 lg:gap-16 pb-24 md:pb-16 ${className}`}>
       <div className="flex flex-col gap-4 items-center">
         <p className="h4">Follow Me</p>
+        
         <motion.div
           className="flex gap-8"
           ref={ref}
@@ -23,7 +24,7 @@ export default function Footer({ className }: { className?: string }) {
           animate={isInView ? "visible" : "hidden"}
         >
           <motion.div
-            variants={slideUp}
+            variants={slideUp(0.3)}
           >
             <Button variant="tertiary" href="https://github.com/KeshtiG" target="_blank" icon={<FiGithub size={18} className="text-accent-300" />}>
               GitHub
@@ -31,7 +32,7 @@ export default function Footer({ className }: { className?: string }) {
           </motion.div>
 
           <motion.div
-            variants={slideUp}
+            variants={slideUp(0.3)}
           >
             <Button variant="tertiary" href="https://www.linkedin.com/in/keshti-gyllinger/" target="_blank" icon={<AiOutlineLinkedin size={18} className="text-accent-300" />}>
               LinkedIn
@@ -39,7 +40,7 @@ export default function Footer({ className }: { className?: string }) {
           </motion.div>
 
           <motion.div
-            variants={slideUp}
+            variants={slideUp(0.3)}
           >
             <Button variant="tertiary" href="https://www.instagram.com/kesh.does.art" target="_blank" icon={<FiInstagram size={18} className="text-accent-300" />}>
               Instagram

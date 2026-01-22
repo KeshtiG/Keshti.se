@@ -1,7 +1,5 @@
 import Marquee from "react-fast-marquee";
 import { useEffect, useState } from "react";
-
-// Icon imports
 import { SiFigma, SiReact, SiDotnet, SiWordpress, SiTailwindcss, SiJavascript, SiTypescript } from "react-icons/si";
 import { FiFramer } from "react-icons/fi";
 import { DiPhotoshop, DiIllustrator, DiSass } from "react-icons/di";

@@ -17,7 +17,7 @@ export default function AboutHeader() {
         <div className="flex flex-col flex-1">
           <motion.div 
             initial = "hidden"
-            variants = {slideUp}
+            variants = {slideUp()}
             animate = "visible"
           >
             <h1>👋🏼 Hello, I'm <span className="text-primary-300">Keshti</span></h1>

@@ -1,5 +1,5 @@
-import { PiGameController } from "react-icons/pi";
 import Button from "@/components/ui/buttons/Button";
+import { PiGameController } from "react-icons/pi";
 import { FiInstagram } from "react-icons/fi";
 
 import {

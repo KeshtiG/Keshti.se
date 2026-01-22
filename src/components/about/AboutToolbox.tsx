@@ -51,7 +51,7 @@ export default function AboutToolbox() {
                 const Icon = tool.icon;
 
                 return (
-                  <motion.div key={tool.name} variants={slideUp}>
+                  <motion.div key={tool.name} variants={slideUp()}>
                     <div className="flex flex-col items-center justify-center gap-2 p-4 border border-neutral-700 rounded-md">
                       <div className="text-primary-300">
                         <Icon size={iconSize} />

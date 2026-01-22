@@ -49,19 +49,19 @@ export default function AboutTimeline() {
             {timelineEvents.map((event, index) => (
               <motion.div
                 key={event.id}
-                variants={slideUp}
-                className={`flex items-center mb-8 md:-mb-8 lg:-mb-16 last:mb-0 flex-col-reverse ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
+                variants={slideUp()}
+                className={`flex relative items-center mb-8 md:-mb-8 lg:-mb-16 last:mb-0 flex-col-reverse ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}  ${expandedId === event.id ? "scale-105" : ""}`}
                 role="article"
                 aria-expanded={expandedId === event.id}
               >
                 <div
                   onClick={() => setExpandedId(expandedId === event.id ? 0 : event.id)}
                   role="button"
-                  className="w-full md:w-7/16 lg:w-5/12 mt-[-16] md:mt-0 cursor-pointer hover:-translate-y-2 transition-all duration-300"
+                  className={`w-full md:w-7/16 lg:w-5/12 mt-[-16] md:mt-0 cursor-pointer hover:-translate-y-2 transition-all duration-300`}
                 >
                   <div
                     key={event.id}
-                    className={`p-4 lg:p-8 bg-background border border-border-light rounded-lg transition-all duration-300 ${expandedId === event.id ? "scale-105" : ""}`}
+                    className={`p-4 lg:p-8 bg-background border border-border-light rounded-lg transition-all duration-300`}
                   >
                     <p className={`text-sm uppercase tracking-widest font-semibold pb-2 ${color[event.category]}`}>{event.category}</p>
                     <h3 className="text-xl lg:text-2xl mb-1 font-bold text-foreground">{event.title}</h3>

@@ -239,6 +239,9 @@ html {
   }
 
   /* Nav Link Hover */
+  .nav-link {
+    transition: all ease-in-out 300ms;
+  }
   .nav-link:hover {
     text-shadow: 
       0 0 20px hsl(240, 85%, 61%),

@@ -1,6 +1,5 @@
 "use client";
 import { motion, useScroll } from "motion/react";
-
 import AboutHeader from "@/components/about/AboutHeader";
 import AboutToolbox from "@/components/about/AboutToolbox";
 import AboutTimeline from "@/components/about/AboutTimeline";

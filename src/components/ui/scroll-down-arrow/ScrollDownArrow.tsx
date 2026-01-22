@@ -1,5 +1,5 @@
-import { BsChevronDown } from "react-icons/bs";
 import styles from "./ScrollDownArrow.module.css";
+import { BsChevronDown } from "react-icons/bs";
 
 type ScrollDownArrowProps = {
   className?: string;

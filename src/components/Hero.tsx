@@ -10,10 +10,6 @@ export default function Hero() {
   return (
     <section className="max-w-full flex flex-col items-center justify-center flex-1 gap-8 md:gap-10 lg:gap-16 pb-16 md:pb-0">
       <div className="flex flex-col items-center gap-2">
-        {/* Logo for mobile view */}
-        <div className="block md:hidden">
-          <img src="/logo.png" alt="Keshti Gyllinger Logo" className="w-14" />
-        </div>
         <div className="flex flex-col lg:flex-row justify-center gap-0 md:gap-4 lg:gap-6">
           <RollingText
             text="Keshti"

@@ -1,10 +1,10 @@
 "use client";
-import VortexBG from "./ui/vortex/VortexBG";
-import Button from "./ui/buttons/Button";
-import CoffeeCup from "@/components/ui/CoffeeCup";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { slideUp } from "@/lib/animations";
+import VortexBG from "./ui/vortex/VortexBG";
+import Button from "./ui/buttons/Button";
+import CoffeeCup from "@/components/ui/CoffeeCup";
 import { Mail } from 'lucide-react';
 
 export default function ContactBanner() {
@@ -20,7 +20,7 @@ export default function ContactBanner() {
           ref={ref}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          variants={slideUp}
+          variants={slideUp()}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl">Want to Collaborate?</h2>
         </motion.div>
