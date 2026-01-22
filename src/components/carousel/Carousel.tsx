@@ -1,5 +1,6 @@
-"use client"
+// Code from: https://www.embla-carousel.com/
 
+"use client"
 import * as React from "react"
 import useEmblaCarousel, {
   type UseEmblaCarouselType,

@@ -20,7 +20,7 @@ export default function About() {
       <AboutHobbies />
       <ContactBanner />
       <motion.div
-        className="bg-primary-600"
+        className="bg-primary-500"
         id="scroll-indicator"
         style={{
             scaleX: scrollYProgress,
@@ -30,7 +30,6 @@ export default function About() {
             right: 0,
             height: 10,
             originX: 0,
-            // backgroundColor: "hsl(270, 50%, 30%)",
         }}
       />
     </main>

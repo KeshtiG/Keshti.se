@@ -10,18 +10,16 @@ export default function Steam() {
   return (
     <div className="relative w-fit h-fit pt-[130px] md:pt-[180px] -z-1">
       <svg
-        className="absolute left-1/2 -translate-x-1/2 bottom-[85px] md:bottom-32 w-[200px] md:w-[300px] h-auto stroke-neutral-600"
+        className="absolute left-1/2 -translate-x-1/2 bottom-[85px] md:bottom-32 w-[200px] md:w-[300px] h-auto stroke-neutral-400"
         width="628"
         height="410"
         viewBox="0 0 620 410"
         fill="none"
-        // stroke="#331452"
         strokeWidth="4"
         preserveAspectRatio="xMidYMax meet"
       >
         <motion.path
           d={path.steam}
-          // stroke="#33293d"
           fill="none"
           initial={{ pathLength: 0, opacity: 0 }}
           animate={{ pathLength: 1, opacity: 1 }}
@@ -44,13 +42,11 @@ export default function Steam() {
         height="300"
         viewBox="0 0 630 320"
         fill="none"
-        // stroke="#331452"
         strokeWidth="4"
       >
         <path
           d={path.cup}
           fill="none"
-          // stroke="#4c1f7a"
           strokeWidth="4"
         />
       </svg>
