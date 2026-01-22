@@ -16,13 +16,13 @@ export default function Hero() {
             inView={false}
             inViewOnce={true}
             transition={{ duration: 0.8, delay: 0.12, ease: "easeOut" }}
-            className="text-[3rem] lg:text-[6rem] font-bold text-center text-foreground relative text-glow font-display"
+            className="text-[3.5rem] md:text-[4.5rem] lg:text-[6rem] font-bold text-center text-foreground relative text-glow font-display"
           />
-          <LinearGradient gradient={['to left', 'rgb(124 182 255), rgb(233 151 255)']} className="text-[3rem] lg:text-[6rem] font-bold font-display text-center mt-[-20] md:mt-[-28] lg:mt-0">
+          <LinearGradient gradient={['to left', 'rgb(124 182 255), rgb(233 151 255)']} className="text-[3.5rem] md:text-[4.5rem] lg:text-[6rem] font-bold font-display text-center mt-[-20] md:mt-[-28] lg:mt-0">
             Gyllinger
           </LinearGradient>
         </div>
-        <span className="text-sm/6 md:text-base lg:text-xl xl:text-2xl tracking-widest text-neutral-100 text-center md:px-0 py-2 md:py-0"><span className="text-primary-200 font-semibold">UI/UX</span> Designer &<br/><span className="text-accent-200 font-semibold">Front-End</span> Developer</span>
+        <span className="text-base lg:text-xl xl:text-2xl tracking-widest text-neutral-100 text-center md:px-0 py-2 md:py-0"><span className="text-primary-200 font-semibold">UI/UX</span> Designer &<br/><span className="text-accent-200 font-semibold">Front-End</span> Developer</span>
       </div>
 
       <div className="flex flex-col items-center gap-2 max-w-full">

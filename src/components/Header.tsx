@@ -50,7 +50,7 @@ export default function Header() {
         ${isHidden ? "-translate-y-full" : "translate-y-0"}
       `}
     >
-      <nav className="container-width mx-auto hidden md:flex justify-between items-center">
+      <nav className="w-full mx-auto hidden md:flex justify-between items-center">
         <div className="flex items-center gap-4">
           <img
             src="/logo.png"
