@@ -61,7 +61,7 @@ export default function AboutTimeline() {
                 >
                   <div
                     key={event.id}
-                    className={`p-4 pt-8 md:pt-4 lg:p-8 bg-background border border-border-light rounded-lg transition-all duration-300 ${expandedId === event.id ? "scale-105" : ""}`}
+                    className={`p-4 lg:p-8 bg-background border border-border-light rounded-lg transition-all duration-300 ${expandedId === event.id ? "scale-105" : ""}`}
                   >
                     <p className={`text-sm uppercase tracking-widest font-semibold pb-2 ${color[event.category]}`}>{event.category}</p>
                     <h3 className="text-xl lg:text-2xl mb-1 font-bold text-foreground">{event.title}</h3>

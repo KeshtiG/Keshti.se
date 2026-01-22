@@ -10,7 +10,7 @@ export default function Steam() {
   return (
     <div className="relative w-fit h-fit pt-[130px] md:pt-[180px] -z-1">
       <svg
-        className="absolute left-1/2 -translate-x-1/2 bottom-[85px] md:bottom-32 w-[200px] md:w-[300px] h-auto stroke-neutral-400"
+        className="absolute left-1/2 -translate-x-1/2 bottom-[85px] md:bottom-32 w-[200px] md:w-[300px] h-auto stroke-neutral-300 lg:stroke-neutral-400"
         width="628"
         height="410"
         viewBox="0 0 620 410"
