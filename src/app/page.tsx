@@ -1,10 +1,11 @@
-import VortexBG from "@/components/ui/Vortex/VortexBG";
-import Parallax from "@/components/Parallax/Parallax";
+import VortexBG from "@/components/ui/vortex/VortexBG";
+import Parallax from "@/components/parallax/Parallax";
 import GradientBG from "@/components/ui/GradientBG";
 import { ProjectCard } from "@/components/projects/ProjectCard";
 import { projects } from "@/components/projects/ProjectData";
 import ContactBanner from "@/components/ContactBanner";
 import Hero from "@/components/Hero";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const sections = [
@@ -14,13 +15,14 @@ export default function Home() {
       component: <ProjectCard project={project} />,
     })),
     { id: "contact", component: <ContactBanner /> },
+    { id: "footer", component: <Footer /> }
   ];
 
   return (
-    <>
+    <main>
       <GradientBG />
       <VortexBG />
       <Parallax sections={sections} />
-    </>
+    </main>
   );
 }

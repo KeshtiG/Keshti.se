@@ -22,7 +22,7 @@ export default function MobileMenu() {
     <div className="block md:hidden">
       <div
         className={`
-          fixed inset-0 z-49 bg-primary-900/80 backdrop-blur-sm
+          fixed inset-0 z-49 bg-primary-900/85 backdrop-blur-sm
           transition-transform duration-500
           ${visible ? "translate-y-0" : "translate-y-full pointer-events-none"}
         `}

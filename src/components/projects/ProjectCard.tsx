@@ -34,24 +34,26 @@ export function ProjectCard({ project }: { project: Project }) {
   const y = useParallax(scrollYProgress, distance);
 
   return (
-    <section className="w-full px-0 md:px-8 lg:px-16 xl:px-24 flex flex-col justify-center items-center lg:flex-row gap-0 md:gap-4 lg:gap-8 xl:gap-16">
-      <div ref={ref} className="w-full h-[40vh] lg:w-3/5 lg:h-[60vh] relative overflow-hidden md:rounded-lg shrink-0">
-        <img src={project.imgUrl} alt={project.title} className="absolute inset-0 w-full h-full object-cover object-center opacity-80" />
-      </div>
-      <motion.div
-        initial={{ visibility: "hidden" }}
-        animate={{ visibility: "visible" }}
-        style={{ y }}
-        className="w-11/12 lg:w-2/5 flex flex-col justify-center bg-neutral-900/60 backdrop-blur-sm lg:bg-background border border-neutral-700 lg:border-background p-4 md:p-8 lg:p-0 rounded-lg gap-4 md:gap-6 will-change-transform"
-      >
-        <h2 className="font-bold font-display text-3xl md:text-4xl lg:text-6xl">{project.title}</h2>
-        <div className="flex flex-wrap gap-2 mb-4">
-          {project.tags?.map((tag) => (
-            <Tag key={tag} text={tag} />
-          ))}
+    <section className="container-width px-0 md:container-x-padding">
+      <div className="flex flex-col justify-center items-center lg:flex-row gap-0 md:gap-4 lg:gap-8 xl:gap-16">
+        <div ref={ref} className="w-full h-[40vh] lg:w-3/5 lg:h-[60vh] relative overflow-hidden md:rounded-lg shrink-0">
+          <img src={project.imgUrl} alt={project.title} className="absolute inset-0 w-full h-full object-cover object-center opacity-80" />
         </div>
-        <p className="text-base lg:text-lg text-foreground-secondary">{project.description}</p>
-      </motion.div>
+        <motion.div
+          initial={{ visibility: "hidden" }}
+          animate={{ visibility: "visible" }}
+          style={{ y }}
+          className="w-11/12 lg:w-2/5 flex flex-col justify-center bg-primary-900/60 backdrop-blur-sm lg:bg-background border border-neutral-700 lg:border-background p-4 md:p-8 lg:p-0 rounded-lg gap-4 md:gap-6 will-change-transform"
+        >
+          <h2 className="font-bold font-display text-3xl md:text-4xl lg:text-6xl">{project.title}</h2>
+          <div className="flex flex-wrap gap-2 mb-4">
+            {project.tags?.map((tag) => (
+              <Tag key={tag} text={tag} />
+            ))}
+          </div>
+          <p className="text-base lg:text-lg text-foreground-secondary">{project.description}</p>
+        </motion.div>
+      </div>
     </section>
   );
 }

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Button from './Buttons/Button';
+import Button from './Button';
 import { Plus, Minus } from 'lucide-react';
 
 type ShowMoreProps = {
@@ -30,7 +30,7 @@ export default function ShowMore({
       </div>
 
       <div className="w-full border-t border-border flex justify-center md:hidden">
-        <Button variant="tertiary" href="#" onClick={() => setOpen(!open)} className="mt-4 md:hidden" icon={open ? <Minus size={16} /> : <Plus size={16} />}>
+        <Button variant="tertiary" href="#" onClick={() => setOpen(!open)} className="mt-4 md:hidden" icon={open ? <Minus size={16} className="text-accent-300" /> : <Plus size={16} className="text-accent-300" />}>
           {open ? 'Show Less' : 'Show More'}
         </Button>
       </div>

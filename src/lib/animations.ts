@@ -26,9 +26,9 @@ export const scaleIn: Variants = {
   }
 };
 
-export const staggerContainer: Variants = {
+export const staggerContainer = (stagger: number = 0.3): Variants => ({
   hidden: {},
   visible: {
-    transition: { staggerChildren: 0.3 }
+    transition: { staggerChildren: stagger }
   }
-};
+});

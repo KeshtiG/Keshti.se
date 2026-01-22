@@ -2,14 +2,13 @@
 import { ChevronsDown, FileText } from 'lucide-react';
 import { LinearGradient } from 'react-text-gradients'
 import { RollingText } from "@/components/ui/Rolling-text";
-import Button from "@/components/ui/Buttons/Button";
-import ScrollDownArrow from "./ui/ScrollDownArrow/ScrollDownArrow";
+import Button from "@/components/ui/buttons/Button";
+import ScrollDownArrow from "./ui/scroll-down-arrow/ScrollDownArrow";
 import ToolMarquee from './ui/ToolMarquee';
 
 export default function Hero() {
   return (
     <section className="max-w-full flex flex-col items-center justify-center flex-1 gap-8 md:gap-10 lg:gap-16 pb-16 md:pb-0">
-
       <div className="flex flex-col items-center gap-2">
         {/* Logo for mobile view */}
         <div className="block md:hidden">
@@ -27,7 +26,7 @@ export default function Hero() {
             Gyllinger
           </LinearGradient>
         </div>
-        <span className="text-sm/6 lg:text-base xl:text-2xl tracking-widest text-neutral-100 text-center md:px-0 py-2 md:py-0"><span className="text-primary-200">UI/UX</span> Designer &<br/><span className="text-accent-200">Frontend</span> Developer</span>
+        <span className="text-sm/6 md:text-base lg:text-xl xl:text-2xl tracking-widest text-neutral-100 text-center md:px-0 py-2 md:py-0"><span className="text-primary-200 font-semibold">UI/UX</span> Designer &<br/><span className="text-accent-200 font-semibold">Front-End</span> Developer</span>
       </div>
 
       <div className="flex flex-col items-center gap-2 max-w-full">

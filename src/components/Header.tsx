@@ -14,7 +14,7 @@ export default function Header() {
         setScrollTopData('border-transparent h-16 md:h-20');
         setLogoSize('h-9 md:h-10 lg:h-12');
       } else {
-        setScrollTopData('bg-surface/50 backdrop-blur-sm border-border h-13 md:h-15');
+        setScrollTopData('bg-primary-800/50 backdrop-blur-xs border-border h-13 md:h-15');
         setLogoSize('h-7 md:h-8 lg:h-10');
       }
     };
@@ -26,8 +26,8 @@ export default function Header() {
 
   return (
     <React.Fragment>
-      <header className={`hidden fixed top-0 left-0 w-full z-50 md:flex px-4 md:px-8 lg:px-16 xl:px-24 transition-all ease-in-out duration-500 border-b ${scrollTopData}`}>
-        <nav className="w-full mx-auto hidden md:flex justify-between items-center">
+      <header className={`hidden fixed top-0 left-0 w-full z-50 md:flex container-x-padding transition-all ease-in-out duration-500 border-b ${scrollTopData}`}>
+        <nav className="container-width mx-auto hidden md:flex justify-between items-center">
           <div className="flex items-center gap-4">
             <img src="/logo.png" alt="Keshti Gyllinger Logo" className={`transition-all ease-in-out duration-500 ${logoSize}`} />
           </div>

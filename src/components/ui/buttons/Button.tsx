@@ -29,7 +29,7 @@ export default function Button({
 
   return (
     <Link href={href}
-        className={`${styles.btn} ${variantClass} flex items-center justify-center gap-2 px-2 md:px-8 ${className}`}
+        className={`${styles.btn} ${variantClass} flex items-center justify-center gap-2 px-2 md:px-8 hover:-translate-y-1 transition-all ease-in-out duration-300 ${className}`}
         {...props}
       >
         {icon && <span className="flex items-center">{icon}</span>}

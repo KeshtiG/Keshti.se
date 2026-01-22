@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import FooterWrapper from "@/components/Footer";
 import MobileMenu from "@/components/MobileMenu";
 
 export const metadata: Metadata = {
@@ -27,9 +27,7 @@ export default function RootLayout({
       >
         <Header />
         <MobileMenu />
-        <main className="flex flex-col gap-8 items-center">
-          {children}
-        </main>
+        {children}
       </body>
     </html>
   );
