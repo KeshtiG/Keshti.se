@@ -7,12 +7,12 @@
 
 .progress {
     position: fixed;
-    border-radius: 100px;
     left: 0;
     right: 0;
-    height: 5px;
+    height: 10px;
     background: var(--color-primary-500);
-    bottom: 8px;
+    bottom: 0;
     transform: scaleX(0);
+    transform-origin: left;
     z-index: 1000;
 }

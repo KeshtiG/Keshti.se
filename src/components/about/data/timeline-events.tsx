@@ -91,7 +91,7 @@ export const timelineEvents: TimelineEvent[] = [
     id: 5,
     title: "Web Programming",
     location: "Blekinge Institute of Technology, Remote",
-    date: "Aug. 2024 - Mar. 2025",
+    date: "Jan. 2024 - Jun. 2024",
     description: [
       "Frontend Development (HTML5, CSS/Sass, PHP, JavaScript, Pico CMS, Git)",
       "Database Management (SQL, MariaDB)",
@@ -105,7 +105,7 @@ export const timelineEvents: TimelineEvent[] = [
     id: 4,
     title: "UI/UX Designer / Illustrator",
     location: "Freelance",
-    date: "Sep. 2022 - Sep. 2024",
+    date: "Sep. 2022 - Dec. 2023",
     description: [
       "Created and delivered seven hand-drawn digital illustrations for an online course commissioned by Region Stockholm, tailored to improve learner engagement and understanding.",
       "Conducted a usability analysis of a digital healthcare service and delivered a UX/WCAG-based improvement report.",
