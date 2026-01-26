@@ -13,8 +13,8 @@ export default function Footer({ className }: { className?: string }) {
 
   return (
     <footer className={`w-full bg-background py-10 px-6 border-t border-neutral-700 flex flex-col items-center gap-10 lg:gap-16 pb-24 md:pb-16 ${className}`}>
-      <div className="flex flex-col gap-4 items-center">
-        <p className="h4">Follow Me</p>
+      <div className="flex flex-col gap-4 md:gap-6 lg:gap-8 items-center">
+        <h2 className="h4">Follow Me</h2>
         
         <motion.div
           className="flex gap-8"
@@ -50,7 +50,7 @@ export default function Footer({ className }: { className?: string }) {
       </div>
 
       <div className="flex flex-col gap-2 items-center p-4 md:p-4 lg:p-8 border border-border rounded-lg text-center">
-        <p className="h4">Site Info</p>
+        <h2 className="h4">Site Info</h2>
         <p>This portfolio site was created with Next.js, React, Tailwind & TypeScript</p>
         <Button variant="tertiary" href="https://github.com/KeshtiG/Keshti.se" target="_blank" className="text-sm my-4">
           View on GitHub

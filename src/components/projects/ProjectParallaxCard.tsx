@@ -50,14 +50,15 @@ export function ProjectParallaxCard({ project }: { project: Project }) {
             className="w-11/12 lg:w-2/5 flex flex-col justify-center bg-primary-900/60 backdrop-blur-sm lg:bg-background border border-neutral-700 lg:border-background p-4 md:p-8 lg:p-0 rounded-lg gap-4 md:gap-6 will-change-transform"
           >
             <h2 className="font-bold font-display text-3xl md:text-4xl lg:text-6xl">{project.title}</h2>
+
+            <p className="text-base lg:text-lg text-foreground-secondary mb-4">{project.description}</p>
             
-            <div className="flex flex-wrap gap-2 mb-4">
+            <div className="flex flex-wrap gap-2">
               {project.tags?.map((tag) => (
                 <Tag key={tag} text={tag} />
               ))}
             </div>
 
-            <p className="text-base lg:text-lg text-foreground-secondary">{project.description}</p>
           </motion.div>
 
         </div>

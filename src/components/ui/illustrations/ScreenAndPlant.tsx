@@ -43,7 +43,7 @@ export default function ScreenAndPlant() {
 
         {/* Pot */}
         <svg
-          className="w-18 sm:w-22 md:w-18 lg:w-22 xl:w-29 2xl:w-32 h-auto stroke-accent-500"
+          className="w-18 sm:w-22 md:w-18 lg:w-22 xl:w-29 2xl:w-32 h-auto stroke-accent-400 lg:stroke-accent-500"
           width="159"
           height="93"
           viewBox="0 0 159 93"
@@ -59,7 +59,7 @@ export default function ScreenAndPlant() {
       
       {/* Screen */}
       <svg
-        className="w-50 sm:w-60 md:w-50 lg:w-65 xl:w-90 2xl:w-100 h-auto stroke-primary-600"
+        className="w-50 sm:w-60 md:w-50 lg:w-65 xl:w-90 2xl:w-100 h-auto stroke-primary-500 lg:stroke-primary-600"
         width="585"
         height="439"
         viewBox="0 0 585 439"

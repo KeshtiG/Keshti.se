@@ -12,7 +12,7 @@ export default function Projects() {
 
   return (
     <>
-      <main className="container-width container-x-padding flex flex-col items-center mx-auto gap-24 lg:gap-48 my-16 sm:my-24 md:my-32 lg:my-56">
+      <main className="container-width container-x-padding container-y-margin flex flex-col items-center mx-auto gap-24 lg:gap-48">
         <PageHeader
           title="Projects"
           description="Here, you'll find a curated collection of projects that I am proud of. Each project represents a unique challenge that I have learned a lot from. I've chosen these examples to showcase the breadth and depth of my skills and approach to problem-solving."
@@ -23,7 +23,7 @@ export default function Projects() {
       <ContactBanner />
       <ScrollIndicator scrollYProgress={scrollYProgress} />
 
-      <Footer className="mt-8 md:mt-16 lg:mt-24" />
+      <Footer />
     </>
   );
 }

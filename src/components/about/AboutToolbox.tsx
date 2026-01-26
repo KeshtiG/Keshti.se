@@ -30,7 +30,7 @@ export default function AboutToolbox() {
         <div className="flex flex-col lg:flex-row w-full gap-16">
           <ShowMore collapsedHeight="max-h-32" className="flex flex-col gap-4 w-full lg:w-1/2 xl:w-2/5">
             <div className="flex flex-col gap-4 pb-4 text-foreground-secondary">
-              <p className="pb-2 border-b border-border text-sm text-neutral-50 uppercase tracking-widest">Story time</p>
+              <h3 className="pb-2 border-b border-border text-sm text-neutral-50 uppercase tracking-widest">Story time</h3>
               <p>I started coding with HTML and CSS at a very basic level when I was a kid, and later deepened those skills through formal frontend studies. Along the way, I learned to write cleaner, more flexible CSS using Sass and BEM.</p>
               <p>During the same education, I worked with WordPress, building custom child themes and handling administration. I’ve studied JavaScript in several rounds, and more recently started learning TypeScript after discovering the fantastic world of React + Tailwind during an internship.</p>
               <p>I’ve used Photoshop and Illustrator since a young age, and as a UX designer, Figma is my go-to tool for design, documentation, and pretty much everything in between.</p>
@@ -39,7 +39,7 @@ export default function AboutToolbox() {
           </ShowMore>
 
           <div className="flex flex-col gap-4 w-full lg:w-1/2 xl:w-3/5">
-            <p className="pb-2 border-b border-border text-sm text-neutral-50 uppercase tracking-widest">Tools</p>
+            <h3 className="pb-2 border-b border-border text-sm text-neutral-50 uppercase tracking-widest">Tools</h3>
             <motion.div
               ref={ref}
               variants={staggerContainer(0.2)}

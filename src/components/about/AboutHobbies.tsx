@@ -5,6 +5,7 @@ import { FiInstagram } from "react-icons/fi";
 import {
   Carousel,
   CarouselContent,
+  CarouselIndicators,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
@@ -84,6 +85,7 @@ export default function AboutHobbies() {
             </CarouselItem>
           ))}
         </CarouselContent>
+        <CarouselIndicators />
       </Carousel>
 
     </section >

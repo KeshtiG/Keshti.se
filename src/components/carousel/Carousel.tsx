@@ -29,6 +29,8 @@ type CarouselContextProps = {
   scrollNext: () => void
   canScrollPrev: boolean
   canScrollNext: boolean
+  current: number
+  count: number
 } & CarouselProps
 
 const CarouselContext = React.createContext<CarouselContextProps | null>(null)
@@ -61,11 +63,15 @@ function Carousel({
   )
   const [canScrollPrev, setCanScrollPrev] = React.useState(false)
   const [canScrollNext, setCanScrollNext] = React.useState(false)
+  const [current, setCurrent] = React.useState(0)
+  const [count, setCount] = React.useState(0)
 
   const onSelect = React.useCallback((api: CarouselApi) => {
     if (!api) return
     setCanScrollPrev(api.canScrollPrev())
     setCanScrollNext(api.canScrollNext())
+    setCurrent(api.selectedScrollSnap())
+    setCount(api.scrollSnapList().length)
   }, [])
 
   const scrollPrev = React.useCallback(() => {
@@ -117,6 +123,8 @@ function Carousel({
         scrollNext,
         canScrollPrev,
         canScrollNext,
+        current,
+        count,
       }}
     >
       <div
@@ -204,6 +212,32 @@ function CarouselNext({ className, ...props }: React.ButtonHTMLAttributes<HTMLBu
   );
 }
 
+function CarouselIndicators({ className, ...props }: React.ComponentProps<"div">) {
+  const { current, count } = useCarousel()
+
+  return (
+    <div
+      className={cn(
+        "flex items-center justify-center gap-2 mt-4",
+        className
+      )}
+      {...props}
+    >
+      {Array.from({ length: count }, (_, index) => (
+        <div
+          key={index}
+          className={cn(
+            "w-3 h-3 rounded-full border-2 transition-all duration-200",
+            index === current
+              ? "bg-primary-400 border-primary-400"
+              : "bg-transparent border-neutral-500"
+          )}
+        />
+      ))}
+    </div>
+  )
+}
+
 
 export {
   type CarouselApi,
@@ -212,5 +246,6 @@ export {
   CarouselItem,
   CarouselPrevious,
   CarouselNext,
+  CarouselIndicators,
   useCarousel,
 }
