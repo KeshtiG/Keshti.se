@@ -59,7 +59,7 @@ export default function Header() {
           />
         </div>
         <div className="hidden md:flex space-x-4">
-          <NavLinks navLink={{ name: "", path: "" }} />
+          <NavLinks />
         </div>
       </nav>
     </header>
