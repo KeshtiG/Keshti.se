@@ -28,7 +28,7 @@ export default function MobileMenu() {
         `}
       >
         <nav className="h-full w-full flex flex-col gap-8 items-center justify-center">
-          <NavLinks navLink={{ name: "", path: "" }} />
+          <NavLinks />
         </nav>
       </div>
 
