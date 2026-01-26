@@ -16,7 +16,7 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <form name="contact" method="POST" data-netlify="true" className="flex flex-col gap-8 lg:gap-10 w-full md:p-8 lg:p-16 md:border md:border-border md:rounded-lg md:bg-primary-900/10 md:backdrop-blur-sm">
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" className="flex flex-col gap-8 lg:gap-10 w-full md:p-8 lg:p-16 md:border md:border-border md:rounded-lg md:bg-primary-900/10 md:backdrop-blur-sm">
         <div className="flex flex-col gap-8 lg:gap-10 w-full">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 w-full">
             <p className="w-full lg:w-1/2">
@@ -30,6 +30,11 @@ export default function ContactForm() {
             <label className="flex flex-col gap-2 lg:gap-4 h5">Message <textarea name="message" className="body text-base lg:text-lg font-normal p-2 lg:p-4 border border-border-light rounded-md outline-none focus:border-accent-500 focus:bg-neutral-950" placeholder="Your message here ..." rows={6}></textarea></label>
           </p>
         </div>
+        <p className="hidden">
+          <label>
+            Don’t fill this out if you’re human: <input name="bot-field" type="text" />
+          </label>
+        </p>
         <p>
           <Button type="submit" href="#" className="lg:w-fit body-large">Send Message</Button>
         </p>
