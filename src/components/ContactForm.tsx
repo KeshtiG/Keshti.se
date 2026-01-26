@@ -8,13 +8,18 @@ export default function ContactForm() {
     const formData = new FormData(event.currentTarget);
 
     try {
-      await fetch("/", {
+      const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData as any).toString(),
       });
-      alert("Message sent successfully!");
-      event.currentTarget.reset();
+      
+      if (response.ok) {
+        alert("Message sent successfully!");
+        event.currentTarget.reset();
+      } else {
+        throw new Error("Form submission failed");
+      }
     } catch (error) {
       alert("Error sending message. Please try again.");
     }
