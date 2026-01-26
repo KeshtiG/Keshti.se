@@ -5,7 +5,8 @@ import HeartBubble from "@/components/ui/illustrations/HeartBubble";
 export default function ContactForm() {
   const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
 
     try {
       const response = await fetch("/", {
@@ -14,15 +15,12 @@ export default function ContactForm() {
         body: new URLSearchParams(formData as any).toString(),
       });
       
-      console.log("Response status:", response.status);
-      console.log("Response ok:", response.ok);
-      
       if (!response.ok) {
         throw new Error("Form submission failed");
       }
       
       alert("Message sent successfully!");
-      event.currentTarget.reset();
+      form.reset();
     } catch (error) {
       console.error("Error:", error);
       alert("Error sending message. Please try again.");
