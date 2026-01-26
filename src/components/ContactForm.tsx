@@ -97,7 +97,6 @@ export default function ContactForm() {
         <p>
           <Button
             type="submit"
-            href="#"
             className="lg:w-fit body-large"
           >
             Send Message
