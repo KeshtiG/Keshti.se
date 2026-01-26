@@ -14,13 +14,17 @@ export default function ContactForm() {
         body: new URLSearchParams(formData as any).toString(),
       });
       
-      if (response.ok) {
-        alert("Message sent successfully!");
-        event.currentTarget.reset();
-      } else {
+      console.log("Response status:", response.status);
+      console.log("Response ok:", response.ok);
+      
+      if (!response.ok) {
         throw new Error("Form submission failed");
       }
+      
+      alert("Message sent successfully!");
+      event.currentTarget.reset();
     } catch (error) {
+      console.error("Error:", error);
       alert("Error sending message. Please try again.");
     }
   };
