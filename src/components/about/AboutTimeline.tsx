@@ -26,7 +26,7 @@ export default function AboutTimeline() {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="cv" className="container-width container-x-padding scroll-mt-12 lg:scroll-mt-24">
+    <section id="cv" className="w-full scroll-mt-12 lg:scroll-mt-24">
       <div className="flex flex-col gap-8 md:gap-12 lg:gap-20">
         <div className="flex flex-col items-center gap-2 md:gap-4">
           <div className="flex gap-3 md:gap-4 justify-center items-center text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary-300">
@@ -64,7 +64,7 @@ export default function AboutTimeline() {
                     className={`p-4 lg:p-8 bg-background border border-border-light rounded-lg transition-all duration-300`}
                   >
                     <p className={`text-sm uppercase tracking-widest font-semibold pb-2 ${color[event.category]}`}>{event.category}</p>
-                    <h3 className="text-xl lg:text-2xl mb-1 font-bold text-foreground">{event.title}</h3>
+                    <h3 className="text-xl lg:text-2xl mb-2 font-bold text-foreground">{event.title}</h3>
                     <div className="flex items-center gap-2">
                       <MapPin size={16} className="text-primary-300 mb-1" />
                       <p>{event.location}</p>

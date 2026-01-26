@@ -51,7 +51,7 @@ export default function AboutHobbies() {
   ]
 
   return (
-    <section className="container-width container-x-padding flex flex-col items-center">
+    <section className="flex flex-col items-center max-w-full">
       <div className="flex flex-col items-center gap-2 md:gap-4 text-center">
         <div className="flex gap-3 md:gap-4 items-center h2 text-primary-300">
           <PiGameController />
@@ -76,7 +76,7 @@ export default function AboutHobbies() {
                     className="w-full h-full object-cover object-center opacity-80"
                   />
                 </div>
-                <div className="w-ful lg:w-2/5 p-4 md:p-6 lg:p-8 xl:p-10 flex flex-col gap-4">
+                <div className="w-full lg:w-2/5 p-4 md:p-6 lg:p-8 xl:p-10 flex flex-col gap-4">
                   <h3>{hobby.title}</h3>
                   {hobby.content}
                 </div>

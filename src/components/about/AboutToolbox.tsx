@@ -21,7 +21,7 @@ export default function AboutToolbox() {
   }, []);
 
   return (
-    <section className="container-width container-x-padding">
+    <section>
       <div className="flex flex-col gap-8 md:gap-12 lg:gap-16 lg:p-8 border-0 lg:border border-border rounded-lg">
         <div className="flex gap-3 md:gap-4 items-center h2 text-primary-300">
           <VscTools />
@@ -54,7 +54,7 @@ export default function AboutToolbox() {
                   <motion.div key={tool.name} variants={slideUp()}>
                     <div className="flex flex-col items-center justify-center gap-2 p-4 border border-neutral-700 rounded-md">
                       <div className="text-primary-300">
-                        <Icon size={iconSize} />
+                        <Icon size={iconSize} aria-label={`${tool.name} icon`} />
                       </div>
                       <p className="text-sm xl:text-base text-foreground-secondary text-center">{tool.name}</p>
                     </div>

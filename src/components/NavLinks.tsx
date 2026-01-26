@@ -10,12 +10,12 @@ type NavLink = {
 const navLinks: NavLink[] =
   [
     { name: "Home", path: "/" },
-    { name: "Projects", path: "/#projects" },
+    { name: "Projects", path: "/projects" },
     { name: "About Me", path: "/about" },
     { name: "Contact", path: "/#contact" },
   ];
 
-export default function NavLinks({ navLink }: { navLink: NavLink }) {
+export default function NavLinks() {
   const pathname = usePathname();
   return (
     <>

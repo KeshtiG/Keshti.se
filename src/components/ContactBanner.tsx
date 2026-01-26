@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { slideUp } from "@/lib/animations";
 import VortexBG from "./ui/vortex/VortexBG";
 import Button from "./ui/buttons/Button";
-import CoffeeCup from "@/components/ui/CoffeeCup";
+import CoffeeCup from "@/components/ui/illustrations/CoffeeCup";
 import { Mail } from 'lucide-react';
 
 export default function ContactBanner() {
@@ -22,7 +22,7 @@ export default function ContactBanner() {
           animate={isInView ? "visible" : "hidden"}
           variants={slideUp()}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl">Want to Collaborate?</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl">Looking for Talent?</h2>
         </motion.div>
         <p className="text-lg lg:text-xl">I’m always open to new challenges and cool ideas 👌🏻<br />Got something brewing? <span className="text-foreground font-bold">Let’s talk!</span></p>
         <Button variant="primary" href="/contact" icon={<Mail size={18} />} className="text-base md:text-lg px-8 w-fit my-4">Get in Touch</Button>

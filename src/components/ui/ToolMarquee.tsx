@@ -17,18 +17,18 @@ export default function ToolMarquee() {
 
   return (
     <Marquee gradient={false} speed={40} className="text-primary-100 md:text-primary-200">
-      <SiFigma size={iconSize} style={{ margin: "0 1rem" }} />
-      <DiPhotoshop size={iconSize} style={{ margin: "0 1rem" }} />
-      <DiIllustrator size={iconSize} style={{ margin: "0 1rem" }} />
-      <FiFramer size={iconSize} style={{ margin: "0 1rem" }} />
-      <TiHtml5 size={iconSize} style={{ margin: "0 1rem" }} />
-      <DiSass size={iconSize} style={{ margin: "0 1rem" }} />
-      <SiJavascript size={iconSize} style={{ margin: "0 1rem" }} />
-      <SiTypescript size={iconSize} style={{ margin: "0 1rem" }} />
-      <SiReact size={iconSize} style={{ margin: "0 1rem" }} />
-      <SiTailwindcss size={iconSize} style={{ margin: "0 1rem" }} />
-      <SiWordpress size={iconSize} style={{ margin: "0 1rem" }} />
-      <SiDotnet size={iconSize} style={{ margin: "0 1rem" }} />
+      <SiFigma size={iconSize} style={{ margin: "0 1rem" }} aria-label="Figma icon" />
+      <DiPhotoshop size={iconSize} style={{ margin: "0 1rem" }} aria-label="Photoshop icon" />
+      <DiIllustrator size={iconSize} style={{ margin: "0 1rem" }} aria-label="Illustrator icon" />
+      <FiFramer size={iconSize} style={{ margin: "0 1rem" }} aria-label="Framer icon" />
+      <TiHtml5 size={iconSize} style={{ margin: "0 1rem" }} aria-label="HTML icon" />
+      <DiSass size={iconSize} style={{ margin: "0 1rem" }} aria-label="Sass icon" />
+      <SiJavascript size={iconSize} style={{ margin: "0 1rem" }} aria-label="JavaScript icon" />
+      <SiTypescript size={iconSize} style={{ margin: "0 1rem" }} aria-label="TypeScript icon" />
+      <SiReact size={iconSize} style={{ margin: "0 1rem" }} aria-label="React icon" />
+      <SiTailwindcss size={iconSize} style={{ margin: "0 1rem" }} aria-label="Tailwind icon" />
+      <SiWordpress size={iconSize} style={{ margin: "0 1rem" }} aria-label="WordPress icon" />
+      <SiDotnet size={iconSize} style={{ margin: "0 1rem" }} aria-label=".NET icon" />
     </Marquee>
   )
 }

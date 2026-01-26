@@ -5,7 +5,7 @@ import VortexBG from "@/components/ui/vortex/VortexBG";
 
 export default function AboutHeader() {
   return (
-    <section className="flex flex-col justify-center items-center container-width container-x-padding">
+    <section className="flex flex-col justify-center items-center">
       <VortexBG />
       <div className="max-w-6xl flex flex-col lg:flex-row gap-8 md:gap-10 lg:gap-16 items-center">
         <div className="w-65 lg:w-97 h-65 lg:h-97 flex justify-center items-center bg-linear-to-br from-accent-400 to-primary-600 rounded-full">
