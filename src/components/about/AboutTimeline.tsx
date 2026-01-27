@@ -41,7 +41,7 @@ export default function AboutTimeline() {
 
           <motion.div
             ref={ref}
-            variants={staggerContainer(0.8)}
+            variants={staggerContainer(0.6)}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             className="relative"

@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import MobileMenu from "@/components/MobileMenu";
 import ScrollToTop from "@/components/ScrollToTop";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Keshti Gyllinger | Portfolio",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-children,
+  children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
@@ -25,7 +26,9 @@ children,
         className="font-sans antialiased"
         suppressHydrationWarning
       >
-        <ScrollToTop />
+        <Suspense>
+          <ScrollToTop />
+        </Suspense>
         <Header />
         <MobileMenu />
         {children}
