@@ -23,12 +23,12 @@ export default function AboutHeader() {
             <h1>👋🏼 Hello, I'm <span className="text-primary-300">Keshti</span></h1>
           </motion.div>
 
-          <div className="body-large mt-6 space-y-4">
-            <p>
-              I’m a creative and communicative <span className="text-neutral-50 font-bold">UI/UX Designer and Front-End Developer</span> with a strong passion for creating digital solutions that not only look great but also provide meaningful user experiences.
+          <div className="mt-6 space-y-4">
+            <p className="body-large">
+              I’m a creative and communicative <span className="text-neutral-50 font-bold">UI/UX Designer and Front-End Developer</span> with a strong passion for creating digital solutions that not only look great, but also provide smooth and engaging user experiences.
             </p>
-            <p>
-              With a background in both design and development, I bring a advantageous blend of skills to the table. From crafting intuitive user interfaces to writing clean, efficient code, I thrive on turning cool ideas into real solutions.
+            <p className="body-large">
+              With a background in both design and development, I bring an advantageous blend of skills to the table. From crafting intuitive user interfaces to writing clean, efficient code, I thrive on turning great ideas into real solutions.
             </p>
           </div>
         </div>

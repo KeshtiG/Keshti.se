@@ -7,7 +7,7 @@ const path = {
 
 export default function HeartBubble() {
   return (
-    <div className="">
+    <div>
       <svg
         className="w-32 sm:w-40 md:w-50 lg:w-60 xl:w-70 h-auto stroke-primary-500"
         width="357"

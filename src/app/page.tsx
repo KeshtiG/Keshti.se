@@ -2,7 +2,7 @@ import VortexBG from "@/components/ui/vortex/VortexBG";
 import Parallax from "@/components/parallax/Parallax";
 import GradientBG from "@/components/ui/GradientBG";
 import { ProjectParallaxCard } from "@/components/projects/ProjectParallaxCard";
-import { projects } from "@/components/projects/ProjectData";
+import { projects } from "@/components/projects/data/project-data";
 import ContactBanner from "@/components/ContactBanner";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";

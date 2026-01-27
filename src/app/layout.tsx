@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import MobileMenu from "@/components/MobileMenu";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "Keshti Gyllinger | Portfolio",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
+children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
@@ -24,6 +25,7 @@ export default function RootLayout({
         className="font-sans antialiased"
         suppressHydrationWarning
       >
+        <ScrollToTop />
         <Header />
         <MobileMenu />
         {children}

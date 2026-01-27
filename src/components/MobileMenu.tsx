@@ -34,7 +34,7 @@ export default function MobileMenu() {
 
       <button
         onClick={() => setVisible((prev) => !prev)}
-        className="bg-background btn-glow w-24 flex justify-center gap-2 border border-accent-400 text-accent-100 rounded-full py-3 fixed bottom-8 left-1/2 -translate-x-1/2 z-50"
+        className="bg-background btn-glow w-26 flex justify-center gap-2 border border-accent-400 text-accent-100 rounded-full py-4 fixed bottom-8 left-1/2 -translate-x-1/2 z-50"
         aria-label={visible ? "Close menu" : "Open menu"}
       >
         {visible ? <IoCloseOutline /> : <CgMenuRight />}

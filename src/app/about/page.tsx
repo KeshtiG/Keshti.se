@@ -9,11 +9,12 @@ import ContactBanner from "@/components/ContactBanner";
 import Footer from "@/components/Footer";
 
 export default function About() {
+  // Scroll progress for scroll indicator
   const { scrollYProgress } = useScroll()
 
   return (
     <>
-      <main className="container-width container-x-padding container-y-margin mx-auto flex flex-col items-center gap-24 lg:gap-48">
+      <main className="container-width container-x-padding container-y-margin container-flex-layout">
         <AboutHeader />
         <AboutToolbox />
         <AboutTimeline />
@@ -21,7 +22,7 @@ export default function About() {
       </main>
       <ContactBanner />
       <ScrollIndicator scrollYProgress={scrollYProgress} />
-      <Footer />
+      <Footer className="mt-4 md:mt-8 lg:mt-16" />
     </>
   )
 }

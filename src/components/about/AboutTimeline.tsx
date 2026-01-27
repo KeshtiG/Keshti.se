@@ -50,7 +50,7 @@ export default function AboutTimeline() {
               <motion.div
                 key={event.id}
                 variants={slideUp()}
-                className={`flex relative items-center mb-8 md:-mb-8 lg:-mb-16 last:mb-0 flex-col-reverse ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}  ${expandedId === event.id ? "scale-105" : ""}`}
+                className={`flex relative items-center mb-8 md:-mb-16 lg:-mb-24 last:mb-0 flex-col-reverse ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}  ${expandedId === event.id ? "scale-105" : ""}`}
                 role="article"
                 aria-expanded={expandedId === event.id}
               >
@@ -64,7 +64,7 @@ export default function AboutTimeline() {
                     className={`p-4 lg:p-8 bg-background border border-border-light rounded-lg transition-all duration-300`}
                   >
                     <p className={`text-sm uppercase tracking-widest font-semibold pb-2 ${color[event.category]}`}>{event.category}</p>
-                    <h3 className="text-xl lg:text-2xl mb-2 font-bold text-foreground">{event.title}</h3>
+                    <h3 className="h4 mb-2">{event.title}</h3>
                     <div className="flex items-center gap-2">
                       <MapPin size={16} className="text-primary-300 mb-1" />
                       <p>{event.location}</p>

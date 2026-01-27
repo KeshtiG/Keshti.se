@@ -12,11 +12,11 @@ type ProjectCardProps = {
 export default function ProjectCard({ title, tags, description, imgUrl, pageUrl }: ProjectCardProps) {
   return (
     <Link href={pageUrl} className="flex flex-col h-full border border-border-light rounded-xl overflow-hidden hover:-translate-y-2 btn-glow transition-all ease-in-out duration-300">
-      <div className="h-60 m:h-80 lg:h-90 xl:h-100">
+      <div className="h-60 sm:h-70 md:h-80 lg:h-90 xl:h-100">
         <img src={imgUrl} alt={`${title}, cover image`} className="w-full h-full object-cover object-center opacity-80" />
       </div>
 
-      <div className="flex flex-col gap-8 lg:gap-10 p-4 md:p-6 lg:p-8 flex-1 justify-between">
+      <div className="flex flex-col gap-8 lg:gap-10 p-4 sm:p-5 md:p-6 lg:p-8 flex-1 justify-between">
         <div className="flex flex-col gap-4">
           <h2>{title}</h2>
           <p className="body-large">{description}</p>

@@ -1,5 +1,5 @@
 "use client";
-import { ChevronsDown, FileText } from 'lucide-react';
+import { LuFolders, LuFileText } from "react-icons/lu";
 import { LinearGradient } from 'react-text-gradients'
 import { RollingText } from "@/components/ui/Rolling-text";
 import Button from "@/components/ui/buttons/Button";
@@ -34,12 +34,12 @@ export default function Hero() {
       </div>
 
       <div className="w-full px-4 lg:px-0 md:w-lg flex items-center justify-center gap-3 md:gap-4 text-base mt-2 md:mt-4">
-        <Button variant="primary" href="/projects" icon={<ChevronsDown size={18} />} className="flex-1 text-base md:text-lg">View Projects</Button>
-        <Button variant="secondary" href="/about#cv" icon={<FileText size={18} />} className="flex-1 text-base md:text-lg">View CV</Button>
+        <Button variant="primary" href="/projects" icon={<LuFolders size={18} />} className="flex-1 text-base md:text-lg">View Projects</Button>
+        <Button variant="secondary" href="/about#cv" icon={<LuFileText size={18} />} className="flex-1 text-base md:text-lg">View CV</Button>
       </div>
 
       <div className="flex flex-col items-center">
-        <span className="text-xs uppercase tracking-widest text-accent-200 font-semibold text-center hidden md:block pb-2 px-8">Showcased projects</span>
+        <span className="text-sm uppercase tracking-widest text-accent-200 font-semibold text-center hidden md:block pb-2 px-8">Showcased projects</span>
         <ScrollDownArrow />
       </div>
 

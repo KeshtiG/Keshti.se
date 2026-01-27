@@ -14,7 +14,7 @@ export default function ContactBanner() {
 
   return (
     <>
-      <section className="w-full min-h-[80vh] flex-1 flex flex-col gap-4 md:gap-6 lg:gap-6 items-center justify-center relative px-4 md:px-6 lg:px-8 text-center">
+      <section className="w-full min-h-[70vh] flex-1 flex flex-col gap-4 md:gap-6 lg:gap-6 items-center justify-center relative px-4 md:px-6 lg:px-8 text-center pb-16 md:pb-24 pt-4 md:pt-6 lg:pt-8">
         <VortexBG />
         <motion.div
           ref={ref}

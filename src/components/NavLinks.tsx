@@ -22,7 +22,7 @@ export default function NavLinks() {
       {navLinks.map((navLink) => (
         <a
           href={navLink.path}
-          className={`text-xl md:text-base uppercase tracking-widest text-accent-200 hover:text-accent-100 nav-link transition-colors px-2 py-1 ${pathname === navLink.path ? ' active' : ''}`}
+          className={`text-base uppercase tracking-widest text-accent-200 hover:text-accent-100 nav-link transition-colors px-2 py-1 ${pathname === navLink.path ? ' active' : ''}`}
           key={navLink.name}
         >
           {navLink.name}

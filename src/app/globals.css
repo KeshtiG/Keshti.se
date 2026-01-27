@@ -142,7 +142,7 @@ html {
   --color-accent-50:  hsl(var(--accent-h) var(--accent-s) var(--accent-l-50));
 }
 
-/* Mobil: sänk mättnad */
+/* Mobile: lower saturation */
 @media (max-width: 640px){
   :root { 
     --neutral-h: 250;
@@ -183,21 +183,25 @@ html {
 
   h3,
   .h3 {
-    @apply text-2xl md:text-3xl lg:text-4xl font-display font-semibold text-foreground leading-[1.2] lg:leading-[1.1];
+    @apply text-xl md:text-2xl lg:text-3xl font-display font-semibold text-foreground leading-[1.2] lg:leading-[1.1];
   }
 
   h4,
   .h4 {
-    @apply text-xl md:text-2xl lg:text-3xl font-display font-semibold text-foreground leading-[1.2] lg:leading-[1.1];
-  }
-
-  h5,
-  .h5 {
     @apply text-lg md:text-xl lg:text-2xl font-display font-semibold text-foreground leading-[1.2] lg:leading-[1.1];
   }
 
+  /* h5,
+  .h5 {
+    @apply text-lg md:text-xl lg:text-2xl font-display font-semibold text-foreground leading-[1.2] lg:leading-[1.1];
+  } */
+
   .body-large {
     @apply text-base lg:text-lg;
+  }
+
+  .body-strong {
+    @apply font-bold text-foreground;
   }
 
   .container-x-padding {
@@ -208,8 +212,16 @@ html {
     @apply w-full max-w-full lg:w-11/12 xl:w-10/12 2xl:w-9/12;
   }
 
+  .container-width-sm {
+    @apply w-full max-w-full lg:w-11/12 xl:w-10/12 2xl:w-7/12;
+  }
+
   .container-y-margin {
-    @apply my-16 sm:my-24 md:my-32 lg:my-56;
+    @apply my-16 sm:my-24 md:my-32 lg:my-60;
+  }
+
+  .container-flex-layout {
+    @apply flex flex-col items-center mx-auto gap-24 lg:gap-48;
   }
 }
 
@@ -264,4 +276,18 @@ html {
     box-shadow: inset 0 -2px 0 0 var(--color-accent-100);
     color: var(--color-accent-100);
   }
+}
+
+/* Autofill Styles */
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:hover {
+  -webkit-box-shadow: 0 0 0 1000px var(--color-background) inset !important;
+  -webkit-text-fill-color: var(--color-foreground-secondary) !important;
+  transition: background-color 5000s ease-in-out 0s;
+  caret-color: var(--color-foreground);
+  border-color: var(--color-neutral-700) !important;
 }

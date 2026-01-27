@@ -55,7 +55,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: 7,
     title: "Full-Stack .NET Developer",
-    location: "Lexicon IT-Proffs, Remote",
+    location: "Lexicon IT-Proffs, Stockholm",
     date: "Mar. 2025 - Oct. 2025",
     description: [
       "C# and .NET (OOP, LINQ, generics)",

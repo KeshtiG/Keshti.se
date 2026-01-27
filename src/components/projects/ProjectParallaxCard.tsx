@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Tag from "@/components/ui/Tag";
-import { Project } from "./ProjectData";
+import { Project } from "./data/project-data";
 import { useEffect, useRef, useState } from "react"
 
 import {

@@ -2,7 +2,7 @@
 import { useRef, useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { staggerContainer, slideUp } from "@/lib/animations";
-import { projects } from "@/components/projects/ProjectData";
+import { projects } from "@/components/projects/data/project-data";
 import ProjectCard from "@/components/projects/ProjectCard";
 
 export default function ProjectGrid() {
