@@ -8,11 +8,11 @@ type ShowMoreProps = {
   className?: string
 }
 
-export default function ShowMore({
+const ShowMore = ({
   children,
   collapsedHeight = 'max-h-32',
   className
-}: ShowMoreProps) {
+}: ShowMoreProps) =>{
 
   const [open, setOpen] = useState(false)
 
@@ -37,3 +37,5 @@ export default function ShowMore({
     </div>
   )
 }
+
+export default ShowMore;

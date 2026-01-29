@@ -4,6 +4,7 @@ import { LuTriangleAlert, LuBrain, LuLightbulb, LuFigma, LuTrello } from "react-
 import { DiPhotoshop, DiIllustrator } from "react-icons/di";
 import { RiDiscordLine } from "react-icons/ri";
 
+// Project Details
 export const projectDetails: ProjectDetails = {
   projectType: ["IPad App Design", "Team Project", "Internship"],
   duration: "6 months (2021-2022)",
@@ -21,6 +22,15 @@ export const projectDetails: ProjectDetails = {
   targetGroup: "Retail staff and shop owners in the jewelry sector, ranging from those new to the job to experienced professionals."
 }
 
+// Ticker Images
+export const tickerImages = [
+  { src: "/projects/ringtailor/montage-ipad/montage-1.webp", alt: "RingTailor login screen" },
+  { src: "/projects/ringtailor/montage-ipad/montage-2.webp", alt: "RingTailor browse screen" },
+  { src: "/projects/ringtailor/montage-ipad/montage-3.webp", alt: "RingTailor product screen" },
+  { src: "/projects/ringtailor/montage-ipad/montage-4.webp", alt: "RingTailor 3D mode screen" },
+];
+
+// Accordion Items
 export const accordionItems: AccordionItem[] = [
   {
     title: "The Problem",
@@ -38,3 +48,15 @@ export const accordionItems: AccordionItem[] = [
     content: <p>I worked extensively on building a heading structure and a visual hierarchy to make the app easier to navigate. I wanted to guide users' eyes to the important parts of the design and create a natural flow. Another main goal of my design was to give the user clear visual feedback so that every decision was obvious. The result was an app with a much more intuitive and well-structured UI, at the cost of minimal code adjustments.</p>
   }
 ]
+
+// Screen Images
+export const screens = [
+  { title: "Loading", src: "/projects/ringtailor/screens/new/1-loading.webp" },
+  { title: "Sign In", src: "/projects/ringtailor/screens/new/2-login.webp" },
+  { title: "Browse Products", src: "/projects/ringtailor/screens/new/3-browse.webp" },
+  { title: "View Product", src: "/projects/ringtailor/screens/new/4-product-page.webp" },
+  { title: "Ring Designer (3D)", src: "/projects/ringtailor/screens/new/5-designer.webp" },
+  { title: "Ring Designer with Popup", src: "/projects/ringtailor/screens/new/6-designer-popup.webp" },
+  { title: "Price Info", src: "/projects/ringtailor/screens/new/7-price-info.webp" },
+  { title: "Admin Panel", src: "/projects/ringtailor/screens/new/8-admin-panel.webp" },
+];

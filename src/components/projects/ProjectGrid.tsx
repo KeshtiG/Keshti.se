@@ -5,8 +5,7 @@ import { staggerContainer, slideUp } from "@/lib/animations";
 import { projects } from "@/components/projects/data/project-data";
 import ProjectCard from "@/components/projects/ProjectCard";
 
-export default function ProjectGrid() {
-  // Scroll settings for animations
+const ProjectGrid = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -39,3 +38,5 @@ export default function ProjectGrid() {
     </section>
   )
 }
+
+export default ProjectGrid;

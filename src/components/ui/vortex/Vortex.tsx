@@ -1,3 +1,5 @@
+// Code from: https://www.shadcn.io/background/vortex
+
 "use client";
 import { cn } from "@/lib/utils";
 import React, { useEffect, useRef } from "react";
@@ -18,7 +20,7 @@ interface VortexProps {
   backgroundColor?: string;
 }
 
-export const Vortex = (props: VortexProps) => {
+const Vortex = (props: VortexProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef(null);
   const particleCount = props.particleCount || 700;
@@ -254,3 +256,5 @@ export const Vortex = (props: VortexProps) => {
     </div>
   );
 };
+
+export default Vortex;

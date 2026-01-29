@@ -1,6 +1,6 @@
-import { Vortex } from "./Vortex";
+import Vortex from "./Vortex";
 
-export default function VortexBG() {
+const VortexBG = () => {
   return (
     <>
       {/* Vortex Background */}
@@ -18,3 +18,5 @@ export default function VortexBG() {
     </>
   );
 }
+
+export default VortexBG;

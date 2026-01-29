@@ -6,8 +6,7 @@ import { tools } from "@/components/about/data/tools";
 import ShowMore from "@/components/ui/buttons/ShowMore";
 import { VscTools } from "react-icons/vsc";
 
-export default function AboutToolbox() {
-  // Scroll settings for animations
+const AboutToolbox = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -68,3 +67,5 @@ export default function AboutToolbox() {
     </section>
   )
 }
+
+export default AboutToolbox;

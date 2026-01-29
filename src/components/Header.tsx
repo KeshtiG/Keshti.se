@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import NavLinks from "./NavLinks";
 
-export default function Header() {
+const Header = () => {
   const [scrollTopData, setScrollTopData] = useState("border-transparent h-16 md:h-20");
   const [logoSize, setLogoSize] = useState("h-9 md:h-10 lg:h-12");
   const [isHidden, setIsHidden] = useState(false);
@@ -65,3 +65,5 @@ export default function Header() {
     </header>
   );
 }
+
+export default Header;

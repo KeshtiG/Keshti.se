@@ -4,7 +4,7 @@ import NavLinks from "./NavLinks";
 import { CgMenuRight } from "react-icons/cg";
 import { IoCloseOutline } from "react-icons/io5";
 
-export default function MobileMenu() {
+const MobileMenu = () => {
   const [visible, setVisible] = React.useState(false);
 
   // Prevent body scroll when mobile menu is open
@@ -45,3 +45,5 @@ export default function MobileMenu() {
     </div>
   );
 }
+
+export default MobileMenu;

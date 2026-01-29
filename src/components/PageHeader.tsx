@@ -8,17 +8,18 @@ type PageHeaderProps = {
   description: JSX.Element;
   imgUrl?: string;
   illustration?: JSX.Element;
+  ticker?: JSX.Element;
   btn?: JSX.Element;
 }
 
-export default function PageHeader({ title, description, imgUrl, illustration }: PageHeaderProps) {
+const PageHeader = ({ title, description, imgUrl, illustration, ticker, btn }: PageHeaderProps) => {
   return (
     <>
       <VortexBG />
       <section className="w-full flex flex-col gap-16 md:gap-24 md:flex-row items-center justify-between">
 
         <div className="flex flex-col-reverse md:flex-row gap-8 md:gap-16 lg:gap-24 items-center justify-between w-full">
-          <div className={`flex flex-col gap-4 lg:gap-6 xl:gap-8 w-full md:w-1/2 ${illustration ? "" : ""}`}>
+          <div className="flex flex-col gap-4 lg:gap-6 xl:gap-8 w-full md:w-1/2">
             <motion.div
               initial="hidden"
               animate="visible"
@@ -39,8 +40,15 @@ export default function PageHeader({ title, description, imgUrl, illustration }:
               {illustration}
             </div>
           }
+          {ticker &&
+            <div className="w-full md:w-1/2 md:flex justify-end">
+              {ticker}
+            </div>
+          }
         </div>
       </section>
     </>
   )
 }
+
+export default PageHeader;

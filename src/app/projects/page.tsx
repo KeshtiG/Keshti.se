@@ -7,8 +7,7 @@ import ContactBanner from "@/components/ContactBanner";
 import Footer from "@/components/Footer";
 import ScreenAndPlant from "@/components/ui/illustrations/ScreenAndPlant";
 
-export default function Projects() {
-  // Scroll progress for scroll indicator
+const Projects = () => {
   const { scrollYProgress } = useScroll();
 
   return (
@@ -27,3 +26,5 @@ export default function Projects() {
     </>
   );
 }
+
+export default Projects;

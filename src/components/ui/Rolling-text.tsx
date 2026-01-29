@@ -1,3 +1,5 @@
+// Code from: https://www.shadcn.io/text/rolling-text
+
 'use client';
 import * as React from 'react';
 import {

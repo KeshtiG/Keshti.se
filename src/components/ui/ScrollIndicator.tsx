@@ -4,7 +4,7 @@ type ScrollIndicatorProps = {
   scrollYProgress: MotionValue<number>;
 }
 
-export default function ScrollIndicator({scrollYProgress}: ScrollIndicatorProps) {
+const ScrollIndicator = ({scrollYProgress}: ScrollIndicatorProps) => {
   return (
     <motion.div
     className="bg-primary-500"
@@ -21,3 +21,5 @@ export default function ScrollIndicator({scrollYProgress}: ScrollIndicatorProps)
   />
   )
 }
+
+export default ScrollIndicator;

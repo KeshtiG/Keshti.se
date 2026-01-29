@@ -7,7 +7,7 @@ import useEmblaCarousel, {
 } from "embla-carousel-react"
 
 import { cn } from "@/lib/utils"
-import { CarouselButton } from "./CarouselButton";
+import CarouselButton from "./CarouselButton";
 import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
 
 type CarouselApi = UseEmblaCarouselType[1]
@@ -179,8 +179,6 @@ function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
     />
   )
 }
-
-
 
 function CarouselPrevious({ className, ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) {
   const { orientation, scrollPrev, canScrollPrev } = useCarousel();

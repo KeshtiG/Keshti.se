@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { slideUp } from "@/lib/animations";
 import VortexBG from "@/components/ui/vortex/VortexBG";
 
-export default function AboutHeader() {
+const AboutHeader =() =>{
   return (
     <section className="flex flex-col justify-center items-center">
       <VortexBG />
@@ -36,3 +36,5 @@ export default function AboutHeader() {
     </section>
   )
 }
+
+export default AboutHeader;

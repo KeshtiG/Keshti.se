@@ -8,7 +8,7 @@ type InstagramPost = {
 };
 
 
-export default function InstagramFeed() {
+const InstagramFeed = () => {
   const token = process.env.NEXT_PUBLIC_IG_TOKEN;
   if (!token) { 
     console.error("Error: Instagram token missing.");
@@ -40,3 +40,5 @@ export default function InstagramFeed() {
     </div>
   );
 }
+
+export default InstagramFeed;

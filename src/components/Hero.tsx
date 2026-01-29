@@ -6,7 +6,7 @@ import Button from "@/components/ui/buttons/Button";
 import ScrollDownArrow from "./ui/scroll-down-arrow/ScrollDownArrow";
 import ToolMarquee from './ui/ToolMarquee';
 
-export default function Hero() {
+const Hero = () => {
   return (
     <section className="max-w-full flex flex-col items-center justify-center flex-1 gap-8 md:gap-10 lg:gap-16 pb-16 md:pb-0">
       <div className="flex flex-col items-center gap-2">
@@ -46,3 +46,5 @@ export default function Hero() {
     </section>
   )
 }
+
+export default Hero;

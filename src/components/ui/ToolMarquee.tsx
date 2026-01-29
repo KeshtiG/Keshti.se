@@ -1,3 +1,5 @@
+// Code from: https://www.react-fast-marquee.com/
+
 import Marquee from "react-fast-marquee";
 import { useEffect, useState } from "react";
 import { SiFigma, SiReact, SiDotnet, SiWordpress, SiTailwindcss, SiJavascript, SiTypescript } from "react-icons/si";

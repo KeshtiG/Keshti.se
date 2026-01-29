@@ -5,12 +5,12 @@ type CarouselButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   className?: string;
 };
 
-export function CarouselButton({
+const CarouselButton = ({
   className,
   disabled,
   children,
   ...props
-}: CarouselButtonProps) {
+}: CarouselButtonProps) => {
   return (
     <button
       type="button"
@@ -26,3 +26,5 @@ export function CarouselButton({
     </button>
   );
 }
+
+export default CarouselButton;

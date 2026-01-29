@@ -2,7 +2,7 @@
 import HeartBubble from "@/components/ui/illustrations/HeartBubble";
 import PageHeader from "@/components/PageHeader";
 
-export default function ContactHeader() {
+const ContactHeader = () => {
   return (
     <PageHeader
       title="Contact Me"
@@ -16,3 +16,5 @@ export default function ContactHeader() {
     />
   );
 }
+
+export default ContactHeader;

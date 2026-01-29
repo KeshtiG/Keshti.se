@@ -1,3 +1,5 @@
+// Code from: https://motion.dev/docs/react-scroll-animations/
+
 "use client"
 import styles from "./Parallax.module.css"
 import {
@@ -15,7 +17,7 @@ type ParallaxProps = {
   sections: ParallaxSection[];
 }
 
-export default function Parallax({ sections }: ParallaxProps) {
+const Parallax = ({ sections }: ParallaxProps) => {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -37,3 +39,5 @@ export default function Parallax({ sections }: ParallaxProps) {
     </>
   );
 }
+
+export default Parallax;

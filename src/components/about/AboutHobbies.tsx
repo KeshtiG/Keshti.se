@@ -11,7 +11,7 @@ import {
 } from "@/components/carousel/Carousel"
 
 
-export default function AboutHobbies() {  
+const AboutHobbies = () => {  
   return (
     <section className="flex flex-col items-center max-w-full">
       <div className="flex flex-col items-center gap-2 md:gap-4 text-center">
@@ -54,3 +54,5 @@ export default function AboutHobbies() {
     </section >
   )
 }
+
+export default AboutHobbies;

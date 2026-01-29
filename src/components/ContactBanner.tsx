@@ -7,8 +7,7 @@ import Button from "./ui/buttons/Button";
 import CoffeeCup from "@/components/ui/illustrations/CoffeeCup";
 import { Mail } from 'lucide-react';
 
-export default function ContactBanner() {
-  // Scroll settings for animations
+const ContactBanner = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -32,3 +31,5 @@ export default function ContactBanner() {
     </>
   );
 }
+
+export default ContactBanner;

@@ -6,8 +6,7 @@ import { useScroll } from "motion/react";
 import ScrollIndicator from "@/components/ui/ScrollIndicator";
 import Footer from "@/components/Footer";
 
-export default function Contact() {
-  // Scroll progress for scroll indicator
+const Contact = () => {
   const { scrollYProgress } = useScroll()
 
   return (
@@ -24,3 +23,5 @@ export default function Contact() {
     </>
   )
 }
+
+export default Contact;

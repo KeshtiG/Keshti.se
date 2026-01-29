@@ -15,12 +15,8 @@ function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance])
 }
 
-export function ProjectParallaxCard({ project }: { project: Project }) {
-
-  // Ref for the section to track scroll position
+const ProjectParallaxCard = ({ project }: { project: Project }) => {
   const ref = useRef(null);
-
-  // Get scroll progress of the section
   const { scrollYProgress } = useScroll({ target: ref });
 
   // Use different distance for parallax effect based on screen size
@@ -40,7 +36,7 @@ export function ProjectParallaxCard({ project }: { project: Project }) {
         <div className="flex flex-col justify-center items-center lg:flex-row gap-0 md:gap-4 lg:gap-8 xl:gap-16">
 
           <div ref={ref} className="w-full h-[40vh] lg:w-3/5 lg:h-[60vh] relative overflow-hidden lg:rounded-lg shrink-0">
-            <img src={project.imgUrl} alt={project.title} className="absolute inset-0 w-full h-full object-cover object-center opacity-80" />
+            <img src={project.imgUrl} alt={project.title} className="absolute inset-0 w-full h-full object-cover object-center opacity-90" />
           </div>
 
           <motion.div
@@ -66,3 +62,5 @@ export function ProjectParallaxCard({ project }: { project: Project }) {
     </section>
   );
 }
+
+export default ProjectParallaxCard;

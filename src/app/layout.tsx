@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   description: "Portfolio website of Keshti Gyllinger - Developer and UX Designer.",
 };
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) => {
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <head>
@@ -36,3 +36,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+export default RootLayout;

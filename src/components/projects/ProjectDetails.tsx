@@ -1,5 +1,5 @@
 import { JSX } from "react";
-import { Accordion, AccordionItem } from "../Accordion";
+import { Accordion, AccordionItem } from "@/components/Accordion";
 
 export type ProjectDetails = {
   projectType: string[];
@@ -21,8 +21,8 @@ type AccordionProps = {
 
 type ProjectDetailsProps = ProjectDetails & AccordionProps;
 
-export default function ProjectDetails({
-  projectType, duration, tools, roles, targetGroup, accordionItems }: ProjectDetailsProps) {
+const ProjectDetails = ({
+  projectType, duration, tools, roles, targetGroup, accordionItems }: ProjectDetailsProps) => {
   return (
     <section className="flex flex-col w-full gap-10 md:gap-16 lg:gap-24 lg:p-12 xl:p-16 lg:border lg:border-border-light rounded-lg">
       <h2>Project Details</h2>
@@ -35,7 +35,7 @@ export default function ProjectDetails({
           <div className="flex flex-row gap-16 lg:gap-24">
 
             {/* Project Type */}
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-2 md:gap-4">
               <h3 className="h4">Project Type</h3>
               <ul>
                 {projectType.map((type) => (
@@ -59,6 +59,7 @@ export default function ProjectDetails({
             </div>
           </div>
 
+          {/* Roles & Target Group */}
           <div className="flex flex-col gap-2 md:gap-4">
             <h3 className="h4">Role & Responsibilities</h3>
             <p className="body-strong body-large text-primary-300">{roles.name.join(" / ")}</p>
@@ -79,3 +80,5 @@ export default function ProjectDetails({
     </section>
   );
 }
+
+export default ProjectDetails;

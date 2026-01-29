@@ -18,10 +18,9 @@ const color: Record<Category, string> = {
   Internship: "text-blue-300/80"
 }
 
-export default function AboutTimeline() {
+const AboutTimeline = () => {
   const [expandedId, setExpandedId] = useState(null as number | null);
 
-  // Scroll settings for animations
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -112,3 +111,5 @@ export default function AboutTimeline() {
     </section>
   );
 };
+
+export default AboutTimeline;

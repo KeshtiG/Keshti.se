@@ -28,13 +28,13 @@ const variantMap: Record<ButtonVariant, string> = {
   tertiary: styles["btn-tertiary"],
 };
 
-export default function Button({
+const Button = ({
   variant = "primary",
   icon,
   children,
   className = "",
   ...props
-}: ButtonProps) {
+}: ButtonProps) => {
   const variantClass = variantMap[variant];
   const baseClasses = `${styles.btn} ${variantClass} flex items-center justify-center gap-2 px-2 md:px-8 hover:-translate-y-1 transition-all ease-in-out duration-300 ${className}`;
 
@@ -61,3 +61,5 @@ export default function Button({
     </button>
   );
 }
+
+export default Button;

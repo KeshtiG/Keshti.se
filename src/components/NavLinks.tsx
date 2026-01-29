@@ -15,7 +15,7 @@ const navLinks: NavLink[] =
     { name: "Contact", path: "/contact" },
   ];
 
-export default function NavLinks() {
+const NavLinks = () => {
   const pathname = usePathname();
   return (
     <>
@@ -31,3 +31,5 @@ export default function NavLinks() {
     </>
   );
 }
+
+export default NavLinks;

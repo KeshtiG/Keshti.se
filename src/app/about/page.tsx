@@ -8,8 +8,7 @@ import AboutHobbies from "@/components/about/AboutHobbies";
 import ContactBanner from "@/components/ContactBanner";
 import Footer from "@/components/Footer";
 
-export default function About() {
-  // Scroll progress for scroll indicator
+const About = () => {
   const { scrollYProgress } = useScroll()
 
   return (
@@ -20,9 +19,12 @@ export default function About() {
         <AboutTimeline />
         <AboutHobbies />
       </main>
+
       <ContactBanner />
       <ScrollIndicator scrollYProgress={scrollYProgress} />
       <Footer className="mt-4 md:mt-8 lg:mt-16" />
     </>
   )
 }
+
+export default About;

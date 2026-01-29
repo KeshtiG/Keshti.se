@@ -1,3 +1,5 @@
+// Code from: https://formcarry.com/
+
 "use client";
 import { useState } from "react";
 import Button from "@/components/ui/buttons/Button";
@@ -6,7 +8,7 @@ import { PiCheckCircle, PiXCircle } from "react-icons/pi";
 const formcarryId = process.env.NEXT_PUBLIC_FORMCARRY_ID;
 const formcarryUrl = `https://formcarry.com/s/${formcarryId}`;
 
-export default function ContactForm() {
+const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -107,3 +109,5 @@ export default function ContactForm() {
       </form>
   );
 }
+
+export default ContactForm;

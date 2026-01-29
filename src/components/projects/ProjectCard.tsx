@@ -9,7 +9,7 @@ type ProjectCardProps = {
   pageUrl: string;
 }
 
-export default function ProjectCard({ title, tags, description, imgUrl, pageUrl }: ProjectCardProps) {
+const ProjectCard = ({ title, tags, description, imgUrl, pageUrl }: ProjectCardProps) => {
   return (
     <Link href={pageUrl} className="flex flex-col h-full border border-border-light rounded-xl overflow-hidden hover:-translate-y-2 btn-glow transition-all ease-in-out duration-300">
       <div className="h-60 sm:h-70 md:h-80 lg:h-90 xl:h-100">
@@ -29,5 +29,7 @@ export default function ProjectCard({ title, tags, description, imgUrl, pageUrl 
         </div>
       </div>
     </Link>
-  )
+  );
 }
+
+export default ProjectCard;

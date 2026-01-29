@@ -6,8 +6,7 @@ import Button from "@/components/ui/buttons/Button";
 import { FiGithub, FiInstagram } from "react-icons/fi";
 import { AiOutlineLinkedin } from "react-icons/ai";
 
-export default function Footer({ className }: { className?: string }) {
-  // Scroll settings for animations
+const Footer = ({ className }: { className?: string }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -64,3 +63,5 @@ export default function Footer({ className }: { className?: string }) {
     </footer>
   );
 }
+
+export default Footer;

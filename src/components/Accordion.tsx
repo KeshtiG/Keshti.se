@@ -14,7 +14,7 @@ type AccordionProps = {
   className?: string;
 };
 
-export function Accordion({ items, className }: AccordionProps) {
+export const Accordion = ({ items, className }: AccordionProps) => {
   const [expandedId, setExpandedId] = useState(null as number | null);
 
   function handleClick(id: number) {
