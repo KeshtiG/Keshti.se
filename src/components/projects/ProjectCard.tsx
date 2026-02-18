@@ -7,11 +7,18 @@ type ProjectCardProps = {
   description: string;
   imgUrl: string;
   pageUrl: string;
+  oldPageUrl?: string;
 }
 
-const ProjectCard = ({ title, tags, description, imgUrl, pageUrl }: ProjectCardProps) => {
+const ProjectCard = ({ title, tags, description, imgUrl, pageUrl, oldPageUrl }: ProjectCardProps) => {
+  const href = oldPageUrl || pageUrl;
+  const isExternal = Boolean(oldPageUrl);
   return (
-    <Link href={pageUrl} className="flex flex-col h-full border border-border-light rounded-xl overflow-hidden hover:-translate-y-2 btn-glow transition-all ease-in-out duration-300">
+    <Link
+      href={href}
+      className="flex flex-col h-full border border-border-light rounded-xl overflow-hidden hover:-translate-y-2 btn-glow transition-all ease-in-out duration-300"
+      {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+    >
       <div className="h-60 sm:h-70 md:h-80 lg:h-90 xl:h-100">
         <img src={imgUrl} alt={`${title}, cover image`} className="w-full h-full object-cover object-center opacity-80" />
       </div>
@@ -22,10 +29,16 @@ const ProjectCard = ({ title, tags, description, imgUrl, pageUrl }: ProjectCardP
           <p className="body-large">{description}</p>
         </div>
 
-        <div className="flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <Tag key={tag} text={tag} />
-          ))}
+        <div className="flex flex-col gap-2">
+          {oldPageUrl && (
+            <p className="text-sm p-1 md:p-2 rounded-md border border-border-light">This site is under development. Link opens the project on my old portfolio site in a new tab.</p>
+          )}
+
+          <div className="flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <Tag key={tag} text={tag} />
+            ))}
+          </div>
         </div>
       </div>
     </Link>

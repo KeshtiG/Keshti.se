@@ -4,6 +4,7 @@ export type Project = {
   description: string;
   imgUrl: string;
   pageUrl: string;
+  oldPageUrl?: string;
 };
 
 export const projects: Project[] = [
@@ -19,27 +20,23 @@ export const projects: Project[] = [
     tags: ["UI Design", "Concept"],
     description: "Created a webshop concept for a modern furniture company.",
     imgUrl: "/project-covers/korp-cover.webp",
-    pageUrl: ""
+    pageUrl: "",
+    oldPageUrl: "https://keshti.wixsite.com/portfolio/korp"
   },
   {
     title: "EUbike: App Redesign",
     tags: ["UI/UX Design", "App Design", "Case Study"],
     description: "Redesigned the EUbike app to improve user experience and functionality.",
     imgUrl: "/project-covers/eubike-cover.webp",
-    pageUrl: ""
+    pageUrl: "",
+    oldPageUrl: "https://keshti.wixsite.com/portfolio/eu-bike"
   },
   {
     title: "Parenting Course Illustrations",
     tags: ["Digital Illustrations"],
     description: "Drew seven digital illustrations for Region Stockholm that were used in a digital parental support course.",
     imgUrl: "/project-covers/1177-cover.webp",
-    pageUrl: ""
-  },
-  {
-    title: "Admin panel for telephony system",
-    tags: ["Digital Illustrations"],
-    description: "Drew seven digital illustrations for Region Stockholm that were used in a digital parental support course.",
-    imgUrl: "/project-covers/1177-cover.webp",
-    pageUrl: ""
+    pageUrl: "",
+    oldPageUrl: "https://keshti.wixsite.com/portfolio/courseillustrations-2"
   },
 ];

@@ -30,9 +30,14 @@ const ProjectParallaxCard = ({ project }: { project: Project }) => {
 
   const y = useParallax(scrollYProgress, distance);
 
+  const href = project.oldPageUrl || project.pageUrl;
+  const isExternal = Boolean(project.oldPageUrl);
   return (
     <section className="container-width px-0 md:container-x-padding">
-      <Link href={project.pageUrl}>
+      <Link
+        href={href}
+        {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+      >
         <div className="flex flex-col justify-center items-center lg:flex-row gap-0 md:gap-4 lg:gap-8 xl:gap-16">
 
           <div ref={ref} className="w-full h-[40vh] lg:w-3/5 lg:h-[60vh] relative overflow-hidden lg:rounded-lg shrink-0">
@@ -49,6 +54,9 @@ const ProjectParallaxCard = ({ project }: { project: Project }) => {
 
             <p className="text-base lg:text-lg text-foreground-secondary mb-4">{project.description}</p>
             
+            {isExternal && (
+              <p className="text-sm p-2 md:p-4 rounded-md border border-border-light mb-2">This site is under development. Link opens the project on my old portfolio site in a new tab.</p>
+            )}
             <div className="flex flex-wrap gap-2">
               {project.tags?.map((tag) => (
                 <Tag key={tag} text={tag} />

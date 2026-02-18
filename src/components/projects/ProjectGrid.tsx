@@ -31,6 +31,7 @@ const ProjectGrid = () => {
               imgUrl={project.imgUrl}
               tags={project.tags}
               pageUrl={project.pageUrl}
+              oldPageUrl={project.oldPageUrl}
             />
           </motion.div>
         )}
