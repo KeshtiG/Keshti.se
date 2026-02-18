@@ -15,7 +15,7 @@ const Home = () => {
       component: <ProjectParallaxCard project={project} />,
     })),
     { id: "contact", component: <ContactBanner /> },
-    { id: "footer", component: <Footer /> }
+    { id: "footer", component: <Footer className="h-full justify-center" /> }
   ];
 
   return (

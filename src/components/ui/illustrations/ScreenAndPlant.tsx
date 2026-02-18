@@ -59,7 +59,7 @@ const ScreenAndPlant = () => {
       
       {/* Screen */}
       <svg
-        className="w-50 sm:w-60 md:w-50 lg:w-65 xl:w-90 2xl:w-100 h-auto stroke-primary-500 lg:stroke-primary-600"
+        className="w-50 sm:w-60 md:w-50 lg:w-65 xl:w-90 2xl:w-100 h-auto stroke-primary-500 lg:stroke-neutral-600"
         width="585"
         height="439"
         viewBox="0 0 585 439"

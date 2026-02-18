@@ -5,7 +5,7 @@ import { slideUp } from "@/lib/animations";
 
 type PageHeaderProps = {
   title: string;
-  description: JSX.Element;
+  description: string[];
   imgUrl?: string;
   illustration?: JSX.Element;
   ticker?: JSX.Element;
@@ -27,7 +27,9 @@ const PageHeader = ({ title, description, imgUrl, illustration, ticker, btn }: P
             >
               <h1 className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">{title}</h1>
             </motion.div>
-            {description}
+            {description.map((paragraph, index) => (
+              <p key={index} className="body-large">{paragraph}</p>
+            ))}
           </div>
 
           {imgUrl &&

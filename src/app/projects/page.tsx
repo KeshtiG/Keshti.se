@@ -15,7 +15,9 @@ const Projects = () => {
       <main className="container-width container-x-padding container-y-margin container-flex-layout">
         <PageHeader
           title="Projects"
-          description={<p className="body-large">Here, you'll find a curated collection of projects that I am proud of. Each project represents a unique challenge that I have learned a lot from. I've chosen these examples to <span className="font-bold text-foreground">showcase the breadth and depth of my skills</span> and approach to problem-solving.</p>}
+          description={[
+            "Here, you'll find a curated collection of projects that I am proud of. Each project represents a unique challenge that I have learned a lot from. I've chosen these examples to showcase the breadth and depth of my skills and approach to problem-solving."
+          ]}
           illustration={<ScreenAndPlant />}
         />
         <ProjectGrid />

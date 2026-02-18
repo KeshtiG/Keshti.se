@@ -6,7 +6,7 @@ import { LuChevronDown } from "react-icons/lu";
 export type AccordionItem = {
   title: string;
   icon: JSX.Element;
-  content: JSX.Element;
+  content: string;
 };
 
 type AccordionProps = {
@@ -49,7 +49,7 @@ export const Accordion = ({ items, className }: AccordionProps) => {
             />
           </div>
           {expandedId === index &&
-            <div className="mt-2 lg:mt-4">{item.content}</div>
+            <div className="mt-2 lg:mt-4"><p>{item.content}</p></div>
           }
         </div>
       ))}

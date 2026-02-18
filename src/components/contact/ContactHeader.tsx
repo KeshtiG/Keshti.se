@@ -6,12 +6,9 @@ const ContactHeader = () => {
   return (
     <PageHeader
       title="Contact Me"
-      description={
-          <p className="body-large">
-            Want to collaborate on a project, share some feedback, or just grab a
-            coffee and chat? ☕ Drop me a message, and I'll get back to you ASAP!
-          </p>
-      }
+      description={[
+        "Want to collaborate on a project, share some feedback, or just grab a coffee and chat? ☕ Drop me a message, and I'll get back to you ASAP!"
+      ]}
       illustration={<HeartBubble />}
     />
   );

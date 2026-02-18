@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { staggerContainer, slideUp } from "@/lib/animations";
 import { tools } from "@/components/about/data/tools";
 import ShowMore from "@/components/ui/buttons/ShowMore";
+import SectionHeader from "@/components/ui/SectionHeading";
 import { VscTools } from "react-icons/vsc";
 
 const AboutToolbox = () => {
@@ -22,10 +23,8 @@ const AboutToolbox = () => {
   return (
     <section>
       <div className="flex flex-col gap-8 md:gap-12 lg:gap-16 lg:p-8 border-0 lg:border border-border rounded-lg">
-        <div className="flex gap-3 md:gap-4 items-center h2 text-primary-300">
-          <VscTools />
-          <h2>My Toolbox</h2>
-        </div>
+        <SectionHeader title="My Toolbox" icon={<VscTools />} />
+
         <div className="flex flex-col lg:flex-row w-full gap-16">
           <ShowMore collapsedHeight="max-h-32" className="flex flex-col gap-4 w-full lg:w-1/2 xl:w-2/5">
             <div className="flex flex-col gap-4 pb-4 text-foreground-secondary">

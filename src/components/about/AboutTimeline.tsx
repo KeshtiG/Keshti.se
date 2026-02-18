@@ -4,12 +4,11 @@
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { staggerContainer, slideUp } from "@/lib/animations";
-
 import Tag from "@/components/ui/Tag";
 import { Category, timelineEvents } from "@/components/about/data/timeline-events";
-
 import { LuListChecks } from "react-icons/lu";
 import { MapPin, Calendar } from 'lucide-react';
+import SectionHeader from "@/components/ui/SectionHeading";
 
 const color: Record<Category, string> = {
   Work: "text-teal-300/80",
@@ -28,10 +27,7 @@ const AboutTimeline = () => {
     <section id="cv" className="w-full scroll-mt-12 lg:scroll-mt-24">
       <div className="flex flex-col gap-8 md:gap-12 lg:gap-20">
         <div className="flex flex-col items-center gap-2 md:gap-4">
-          <div className="flex gap-3 md:gap-4 justify-center items-center text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary-300">
-            <LuListChecks />
-            <h2 className="text-foreground">CV - Timeline</h2>
-          </div>
+          <SectionHeader title="CV - Timeline" icon={<LuListChecks />} />
           <p className="text-sm lg:text-base text-foreground-secondary">Select a card to view more details</p>
         </div>
         <div className="relative">
@@ -65,11 +61,11 @@ const AboutTimeline = () => {
                     <p className={`text-sm uppercase tracking-widest font-semibold pb-2 ${color[event.category]}`}>{event.category}</p>
                     <h3 className="h4 mb-2">{event.title}</h3>
                     <div className="flex items-center gap-2">
-                      <MapPin size={16} className="text-primary-300 mb-1" />
+                      <MapPin size={16} className="text-primary-400 mb-1" />
                       <p>{event.location}</p>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Calendar size={16} className="text-primary-300 mb-1" />
+                      <Calendar size={16} className="text-primary-400 mb-1" />
                       <p>{event.date}</p>
                     </div>
 
@@ -77,7 +73,7 @@ const AboutTimeline = () => {
                       <div className="mt-4 md:mt-6 lg:mt-8 transition-all duration-300">
                         <ul className="space-y-2 text-sm">
                           {event.description.map((point) => (
-                            <li key={point}><span className="text-primary-300 pr-2">▷</span>{point}</li>
+                            <li key={point}><span className="text-primary-400 mr-2">●</span>{point}</li>
                           ))}
                         </ul>
                       </div>
@@ -110,6 +106,6 @@ const AboutTimeline = () => {
       </div>
     </section>
   );
-};
+}
 
 export default AboutTimeline;

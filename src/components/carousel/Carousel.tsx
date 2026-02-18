@@ -216,7 +216,7 @@ function CarouselIndicators({ className, ...props }: React.ComponentProps<"div">
   return (
     <div
       className={cn(
-        "flex items-center justify-center gap-2 mt-4",
+        "w-full flex items-center justify-center gap-2 mt-4",
         className
       )}
       {...props}
@@ -225,10 +225,10 @@ function CarouselIndicators({ className, ...props }: React.ComponentProps<"div">
         <div
           key={index}
           className={cn(
-            "w-3 h-3 rounded-full border-2 transition-all duration-200",
+            "w-full h-1 transition-all duration-200",
             index === current
-              ? "bg-primary-400 border-primary-400"
-              : "bg-transparent border-neutral-500"
+              ? "bg-primary-400"
+              : "bg-neutral-700"
           )}
         />
       ))}

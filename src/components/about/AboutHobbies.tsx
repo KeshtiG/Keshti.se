@@ -1,5 +1,6 @@
 import { hobbies } from "@/components/about/data/hobbies";
 import { PiGameController } from "react-icons/pi";
+import SectionHeader from "@/components/ui/SectionHeading";
 
 import {
   Carousel,
@@ -15,18 +16,17 @@ const AboutHobbies = () => {
   return (
     <section className="flex flex-col items-center max-w-full">
       <div className="flex flex-col items-center gap-2 md:gap-4 text-center">
-        <div className="flex gap-3 md:gap-4 items-center h2 text-primary-300">
-          <PiGameController />
-          <h2 className="text-foreground">Things I enjoy</h2>
-        </div>
+        <SectionHeader title="Things I enjoy" icon={<PiGameController />} />
         <p>A few interests that say a little more about who I am outside of work</p>
       </div>
 
       <Carousel className="h-fit lg:h-140 w-full lg:w-11/12 xl:w-10/12">
-        <div className="w-full flex justify-center md:justify-end gap-4 mb-4 mt-2 lg:mt-0">
+        <div className="w-full flex justify-end gap-4 mb-1 mt-2 lg:mt-4">
           <CarouselPrevious />
           <CarouselNext />
         </div>
+
+        <CarouselIndicators className="mb-3" />
 
         <CarouselContent className="h-full">
           {hobbies.map((hobby) => (
@@ -47,8 +47,6 @@ const AboutHobbies = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        
-        <CarouselIndicators />
       </Carousel>
 
     </section >

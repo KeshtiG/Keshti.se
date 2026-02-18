@@ -1,17 +1,20 @@
 "use client";
+import * as data from "@/components/projects/data/ringtailor-data";
 import { useScroll } from "framer-motion";
 import PageHeader from "@/components/PageHeader";
-import ScrollIndicator from "@/components/ui/ScrollIndicator";
-import Footer from "@/components/Footer";
 import ProjectDetails from "@/components/projects/ProjectDetails";
-import { projectDetails, accordionItems } from "@/components/projects/data/ringtailor-data";
-import { tickerImages } from "@/components/projects/data/ringtailor-data";
+import ProjectCarousel from "@/components/projects/ProjectCarousel";
+import ProjectLearnings from "@/components/projects/ProjectLearnings";
+import ProjectTextSection from "@/components/projects/ProjectTextSection";
+import ProjectResearchInsights from "@/components/projects/ProjectResearchInsights";
+import ScrollIndicator from "@/components/ui/ScrollIndicator";
+import SectionHeader from "@/components/ui/SectionHeading";
 import ImageTicker from "@/components/ImageTicker";
-import ProjectSolutionCarousel from "@/components/projects/ProjectSolutionCarousel";
-import { screens } from "@/components/projects/data/ringtailor-data";
-import { LuEye } from "react-icons/lu";
-import SectionHeader from "@/components/ui/SectionHeader";
-import { Section } from "lucide-react";
+import ImplementationSection from "@/app/projects/ringtailor/components/ImplementationSection";
+import PageDivider from "@/components/ui/PageDivider";
+import Footer from "@/components/Footer";
+import { LuEye, LuUserRoundSearch, LuLightbulb } from "react-icons/lu";
+import ProjectReflections from "@/components/projects/ProjectReflections";
 
 const RingTailor = () => {
   const { scrollYProgress } = useScroll();
@@ -19,26 +22,50 @@ const RingTailor = () => {
   return (
     <>
       <main className="container-width container-x-padding container-y-margin container-flex-layout">
+        {/* Page Header */}
         <PageHeader
-          title="RingTailor"
-          description={
-            <>
-              <p className="body-large">During my internship as part of my UX design education, I worked on the latest version of Schalins Ringar's ring design app.</p>
-
-              <p className="body-large">My job was to <span className="body-strong">apply better usability and a more modern look</span> to the app, as well as the company's new branding guidelines, without making too many changes to the structure.</p>
-            </>
-          }
-          ticker={<ImageTicker images={tickerImages} timeout={3000} imgClassName="object-contain opacity-70" />}
+          title={data.projectHeader.title}
+          description={data.projectHeader.description}
+          ticker={<ImageTicker images={data.tickerImages} timeout={3000} imgClassName="object-contain opacity-70" />}
         />
 
+        <PageDivider text="<Project Overview>" />
+
+        {/* Details */}
         <ProjectDetails
-          {...projectDetails}
-          accordionItems={accordionItems}
+          {...data.projectDetails}
+          accordionItems={data.accordionItems}
         />
-        <div className="flex flex-col gap-8 md:gap-10 lg:gap-16 items-center">
+
+        {/* Solution Overview */}
+        <div className="flex flex-col gap-8 md:gap-10 lg:gap-16 md:items-center">
           <SectionHeader title="Solution Overview" icon={<LuEye />} />
-          <ProjectSolutionCarousel images={screens} orientation="vertical" />
+          <ProjectCarousel images={data.screens} showImageTitle={true} />
         </div>
+
+        {/* Learnings */}
+        <ProjectLearnings learnings={data.learnings} />
+
+        <PageDivider text="</Project Overview> <Research>" />
+
+        {/* Research */}
+        <ProjectTextSection sections={data.researchSections} images={data.researchImages} sectionTitle="Research" sectionTitleIcon={<LuUserRoundSearch />} />
+        <ProjectCarousel images={data.researchUserArchetypes} showImageTitle={false} showCarouselHeading={true} carouselHeading="User Archetypes" width="wide" />
+        <ProjectResearchInsights insights={data.researchInsights} />
+
+        <PageDivider text="</Research> <Ideation>" />
+
+        {/* Ideation */}
+        <ProjectTextSection sections={data.ideationSections} images={data.ideationImages} sectionTitle="Ideation" sectionTitleIcon={<LuLightbulb />} />
+
+        <PageDivider text="</Ideation> <Implementation>" />
+
+        {/* Implementation */}
+        <ImplementationSection />
+
+        <PageDivider text="</Implementation> <Reflections>" />
+        <ProjectReflections content={data.reflections} />
+        
       </main>
       <ScrollIndicator scrollYProgress={scrollYProgress} />
       <Footer className="mt-4 md:mt-8 lg:mt-16" />
