@@ -2,8 +2,7 @@
 
 A personal portfolio website where I present my projects and skills in Web Development and UI/UX Design.
 
-This site is currently under construction and will be published soon to www.keshti.se. You can check out the current live version of the project here: 
-[View Project on Netlify](https://keshtig.netlify.app/)
+This site is live at [www.keshti.se](https://www.keshti.se), but is still under construction. Some project links may temporarily lead to my old portfolio site while content is being migrated.
 
 ### Pages Currently Live
 
