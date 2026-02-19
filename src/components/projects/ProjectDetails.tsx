@@ -41,7 +41,7 @@ const ProjectDetails = ({
               <h3 className="h4">Project Type</h3>
               <ul>
                 {projectType.map((type) => (
-                  <li key={type} className="text-sm sm:text-base"><span className="text-primary-400 mr-2">●</span>{type}</li>
+                  <li key={type} className="text-sm sm:text-base"><span className="text-primary-300 mr-2">●</span>{type}</li>
                 ))}
               </ul>
               <p className="text-sm sm:text-base">{duration}</p>
@@ -53,7 +53,7 @@ const ProjectDetails = ({
               <ul>
                 {tools.map((tool) => (
                   <li key={tool.name} className="flex items-center gap-2 text-sm sm:text-base">
-                    <span className="text-primary-400">{tool.icon}</span>
+                    <span className="text-primary-300">{tool.icon}</span>
                     {tool.name}
                   </li>
                 ))}

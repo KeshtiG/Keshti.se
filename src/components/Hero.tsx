@@ -16,9 +16,9 @@ const Hero = () => {
             inView={false}
             inViewOnce={true}
             transition={{ duration: 0.8, delay: 0.12, ease: "easeOut" }}
-            className="text-[3.5rem] md:text-[4.5rem] lg:text-[6rem] font-bold text-center text-foreground relative text-glow font-display"
+            className="text-[4rem] md:text-[4.5rem] lg:text-[6rem] font-bold text-center text-foreground relative text-glow font-display"
           />
-          <LinearGradient gradient={['to left', 'rgb(124 182 255), rgb(233 151 255)']} className="text-[3.5rem] md:text-[4.5rem] lg:text-[6rem] font-bold font-display text-center mt-[-20] md:mt-[-28] lg:mt-0">
+          <LinearGradient gradient={['to left', 'rgb(124 182 255), rgb(233 151 255)']} className="text-[4rem] md:text-[4.5rem] lg:text-[6rem] font-bold font-display text-center mt-[-20] md:mt-[-28] lg:mt-0">
             Gyllinger
           </LinearGradient>
         </div>

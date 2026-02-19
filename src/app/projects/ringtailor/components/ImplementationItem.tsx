@@ -14,7 +14,7 @@ const SolutionItem = ({ title, icon, problemDescription, solutionDescription, ol
   return (
     <div className="flex flex-col gap-6 md:gap-8 lg:gap-12">
       <h3 className="flex items-center gap-3">
-        <span className="text-primary-400">{icon}</span>
+        <span className="text-primary-300">{icon}</span>
         {title}
       </h3>
 

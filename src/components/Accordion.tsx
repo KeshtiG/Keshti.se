@@ -45,7 +45,7 @@ export const Accordion = ({ items, className }: AccordionProps) => {
             </div>
             <LuChevronDown
               size={iconSize}
-              className={`chevron-icon text-accent-400 transition-transform duration-300 ${expandedId === index ? "rotate-180" : ""}`}
+              className={`chevron-icon text-accent-300 transition-transform duration-300 ${expandedId === index ? "rotate-180" : ""}`}
             />
           </div>
           {expandedId === index &&
