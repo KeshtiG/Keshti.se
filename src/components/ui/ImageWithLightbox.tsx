@@ -11,6 +11,7 @@ export type ImageWithLightboxProps = {
   className?: string;
   imageClassName?: string;
   imageHeight?: string;
+  titleOnImage?: string;
 };
 
 const ImageWithLightbox = ({ 
@@ -19,7 +20,8 @@ const ImageWithLightbox = ({
   showTitle = true, 
   className,
   imageClassName,
-  imageHeight = "h-64"
+  imageHeight = "h-64",
+  titleOnImage
 }: ImageWithLightboxProps) => {
   const { lightboxImage, openLightbox, closeLightbox } = useImageLightbox();
   const [isClient, setIsClient] = useState(false);
@@ -41,9 +43,15 @@ const ImageWithLightbox = ({
             alt={title}
             className={`w-full h-full object-cover object-center transition-opacity duration-300 opacity-90 group-hover:opacity-10 ${imageClassName}`}
           />
+          
+          {titleOnImage && (
+            <p className="absolute bottom-2 right-2 text-xs bg-background text-foreground uppercase tracking-widest px-2 py-1 rounded">{titleOnImage}</p>
+          )}
+
           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <LuZoomIn className="text-accent-300 text-4xl" />
           </div>
+
         </div>
         {showTitle && (
           <p className="text-center mt-2 text-sm sm:text-base pb-2">{title}</p>

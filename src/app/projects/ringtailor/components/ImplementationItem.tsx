@@ -22,11 +22,11 @@ const SolutionItem = ({ title, icon, problemDescription, solutionDescription, ol
         <img src={newImgSrc} alt={`${title} - new design`} className="w-full lg:w-2/3 h-auto rounded-lg" />
 
         <div className="w-full lg:w-1/3 flex flex-col gap-4 md:gap-6 lg:gap-8 justify-between">
-          <div className="flex flex-col order-2 lg:order-1 gap-2 md:gap-3 lg:gap-4 mb-4 lg:mb-0">
+          <div className="flex flex-col order-3 lg:order-1 gap-2 md:gap-3 lg:gap-4 mb-4 lg:mb-0">
             <h4>The Problem</h4>
             <p>{problemDescription}</p>
           </div>
-          <div className="flex flex-col gap-2 md:gap-3 lg:gap-4 mb-4 lg:mb-0">
+          <div className="flex flex-col order-1 lg:order-2 gap-2 md:gap-3 lg:gap-4 mb-4 lg:mb-0">
             <h4>The Solution</h4>
             <p>{solutionDescription}</p>
           </div>
@@ -35,10 +35,11 @@ const SolutionItem = ({ title, icon, problemDescription, solutionDescription, ol
             src={oldImgSrc}
             title={`${title} - old design`}
             showTitle={false}
-            className="rounded-lg overflow-hidden hidden lg:block"
+            className="rounded-lg overflow-hidden hidden lg:block lg:order-3"
+            titleOnImage="Old design"
           />
 
-          <img src={oldImgSrc} alt={`${title} - old design`} className="w-full h-auto rounded-lg lg:hidden" />
+          <img src={oldImgSrc} alt={`${title} - old design`} className="w-full h-auto rounded-lg lg:hidden order-2" />
         </div>
       </div>
     </div>

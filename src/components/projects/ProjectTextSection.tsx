@@ -16,12 +16,12 @@ const ProjectTextSection = ({ sections, images, sectionTitle, sectionTitleIcon }
   return (
     <section className="flex flex-col gap-10 md:gap-16 lg:gap-24 w-full">
       {sectionTitle && <SectionHeader title={sectionTitle} icon={sectionTitleIcon} />}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-16 xl:gap-x-56 xl:gap-y-24">
+      <div className="columns-1 lg:columns-2 lg:gap-16 xl:gap-40">
         {sections.map((section, index) => (
-          <div key={index} className="flex flex-col gap-4 md:gap-6 ">
+          <div key={index} className="break-inside-avoid mb-8 md:mb-10 lg:mb-16 flex flex-col gap-4 md:gap-6">
             <h3 className="h4">{section.title}</h3>
-            {section.content.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
+            {section.content.map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
             ))}
           </div>
         ))}

@@ -16,7 +16,6 @@ export const projectHeader = {
 // Project Details
 export const projectDetails: ProjectDetails = {
   projectType: ["IPad App Design", "Team Project", "Internship"],
-  duration: "6 months (2021-2022)",
   tools: [
     { name: "Figma", icon: <LuFigma /> },
     { name: "Adobe Photoshop", icon: <DiPhotoshop /> },

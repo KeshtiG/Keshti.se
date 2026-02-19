@@ -55,7 +55,7 @@ const ProjectParallaxCard = ({ project }: { project: Project }) => {
             <p className="text-base lg:text-lg text-foreground-secondary mb-4">{project.description}</p>
             
             {isExternal && (
-              <p className="text-sm p-2 md:p-4 rounded-md border border-border-light mb-2">This site is under development. Link opens the project on my old portfolio site in a new tab.</p>
+              <p className="text-sm p-1 md:p-2 rounded-md border border-border-light mb-2">This site is under development. Link opens the project on my old portfolio site in a new tab.</p>
             )}
             <div className="flex flex-wrap gap-2">
               {project.tags?.map((tag) => (

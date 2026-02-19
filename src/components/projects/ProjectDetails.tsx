@@ -5,7 +5,7 @@ import { LuList } from "react-icons/lu";
 
 export type ProjectDetails = {
   projectType: string[];
-  duration: string;
+  duration?: string;
   tools: {
     name: string;
     icon: JSX.Element;
@@ -44,7 +44,7 @@ const ProjectDetails = ({
                   <li key={type} className="text-sm sm:text-base"><span className="text-primary-300 mr-2">●</span>{type}</li>
                 ))}
               </ul>
-              <p className="text-sm sm:text-base">{duration}</p>
+              {duration && <p className="text-sm sm:text-base">{duration}</p>}
             </div>
 
             {/* Tools */}
