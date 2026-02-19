@@ -8,6 +8,7 @@ This site is live at [www.keshti.se](https://www.keshti.se), but is still under 
 
 - **Home**
 - **Projects**
+- **Projects/RingTailor**
 - **About**
 - **Contact**
 
